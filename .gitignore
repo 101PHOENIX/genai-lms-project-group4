@@ -19,3 +19,26 @@ build/
 # OS
 .DS_Store
 Thumbs.db
+
+# .NET test build output
+bin/
+obj/
+TestResults/
+
+# Unity (when the project is added under unity/)
+unity/[Ll]ibrary/
+unity/[Tt]emp/
+unity/[Ll]ogs/
+unity/[Uu]ser[Ss]ettings/
+*.csproj.user
+
+# LaTeX intermediates (keep .tex and .pdf)
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+!baselines/*.log
+
+# Course material (on Moodle, not ours to redistribute)
+GenAI - Videogame.pdf

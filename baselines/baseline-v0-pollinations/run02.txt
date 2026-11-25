@@ -1,0 +1,123 @@
+{
+  "case_number": 1,
+  "case_type": "standard",
+  "victim": "marco",
+  "killer": "andrea",
+  "accomplice": null,
+  "weapon": "pencil",
+  "motive": "Envy of Marco’s overdue scholarship and a hidden plan to steal a copy of the winning art sketch.",
+  "crime_location": "library",
+  "time_of_death": "23:15",
+  "truth_summary": "Marco was found lying near the map section of the library, a crumpled sketch, and a misaligned pencil hidden among the shelves. The notebook on the bench belonged to Andrea, whose secret intimacy with the art curator pushed her to sabotage Marco’s project. She forged a story that Marco had left early and hid evidence in the library. The subsequent clues point to her calculated act and distract the others with false leads.",
+  "crime_scene_prompt": "A quiet corner of the library overflows with soft, flickering light from a single lamp. In the center, a university student lies on the floor, the school uniform knotted loosely, with a chocolate‑brown pencil tucked underneath their head. Books and a single open sketchpad scatter nearby, hinting at an interrupted night of creative work.",
+  "host_announcement": "A hush falls over the halls as the class opens its eyes to a midnight mystery. What truth will you unveil in the flickering glow?",
+  "key_clues": [
+    {
+      "id": "k1",
+      "name": "Red Pencil",
+      "location": "library",
+      "description": "A pencil with a faint crimson tip stained by ink from a sketching session.",
+      "points_to": "andrea",
+      "requires_skill": null,
+      "image_prompt": "a close‑up of a red pencil with a small swirl of ink on its tip"
+    },
+    {
+      "id": "k2",
+      "name": "Hidden Sketchpad",
+      "location": "library",
+      "description": "An unopened sketchpad with a faded sketch of a medal that belongs to Marco’s master.",
+      "points_to": "andrea",
+      "requires_skill": null,
+      "image_prompt": "a close‑up of a sketchpad with a faint image of a medal"
+    },
+    {
+      "id": "k3",
+      "name": "Dusty Notebook",
+      "location": "library",
+      "description": "A notebook with Marco’s signature, but the pages have been cut and rearranged to hide a secret message.",
+      "points_to": "andrea",
+      "requires_skill": null,
+      "image_prompt": "a close‑up of a notebook page with handwritten notes and cut edges"
+    },
+    {
+      "id": "k4",
+      "name": "Empty Coffee Cup",
+      "location": "library",
+      "description": "A dry cup left on a chair that once belonged to Marco, leaving a faint, dissolved pattern.",
+      "points_to": "marco",
+      "requires_skill": null,
+      "image_prompt": "a close‑up of an empty ceramic cup with a faint pattern on its rim"
+    }
+  ],
+  "minor_clues": [
+    {
+      "id": "m1",
+      "location": "library",
+      "description": "The librarian notes a sudden silence in the study area around 22:45.",
+      "source": "scene"
+    },
+    {
+      "id": "m2",
+      "location": "dorm_andrea",
+      "description": "Andrea’s roommate hears a loud thump from the corridor at 23:00.",
+      "source": "pablo"
+    },
+    {
+      "id": "m3",
+      "location": "classroom",
+      "description": "Marco’s desk was left cluttered, his math notes the only finished work.",
+      "source": "serafettin"
+    },
+    {
+      "id": "m4",
+      "location": "courtyard",
+      "description": "An unattended backpack, filled with art supplies, sits near the fountain.",
+      "source": "andrea"
+    }
+  ],
+  "false_clues": [
+    {
+      "id": "f1",
+      "location": "cafeteria",
+      "description": "A rumor that Marco “faked” his night out to get a smoking break.",
+      "planted_by": "alba",
+      "points_to": "alba"
+    },
+    {
+      "id": "f2",
+      "location": "dorm_andrea",
+      "description": "A torn photograph that supposedly shows Marco and Andrea together at a gallery opening.",
+      "planted_by": "chechu",
+      "points_to": "chechu"
+    },
+    {
+      "id": "f3",
+      "location": "gym",
+      "description": "An empty water bottle found beside the bleachers, once claimed as Marco’s.",
+      "planted_by": "pablo",
+      "points_to": "pablo"
+    }
+  ],
+  "npc_secrets": [
+    {
+      "character": "alba",
+      "alibi": "I was in my dorm, studying late into the night.",
+      "is_lying": true,
+      "secret": "I tipped Marco off to Summit’s schedule so he could gather the sketch.",
+      "knows": ["k1", "m1"]
+    },
+    {
+      "character": "chechu",
+      "alibi": "I was cooking in the cafeteria until after midnight.",
+      "is_lying": true,
+      "secret": "I actually delivered a secret note to Andrea that arranged the meeting.",
+      "knows": ["k2", "m2"]
+    },
+    {
+      "character": "mario",
+      "alibi": "I was in the library, walking my dog on the courtyard path.",
+      "is_lying": false,
+      "secret": "I heard a rustling noise at 22:30 but didn't notice anyone else.",
+      "knows": ["k4"]
+    },
+   

@@ -1,0 +1,21 @@
+{
+  "_note": "PLACEHOLDER world state. Replace skills/locations once the character sheets and the Boarding School decisions are in (see plan: Decisions needed now).",
+  "school_name": "TBD Boarding School",
+  "locations": ["classroom", "cafeteria", "library", "courtyard", "gym", "infirmary"],
+  "dormitory_prefix": "dorm_",
+  "characters": [
+    {"id": "alba",       "name": "Alba",       "skill": "TBD"},
+    {"id": "marco",      "name": "Marco",      "skill": "TBD"},
+    {"id": "chechu",     "name": "Chechu",     "skill": "Chef"},
+    {"id": "mario",      "name": "Mario",      "skill": "TBD"},
+    {"id": "angela",     "name": "Ángela",     "skill": "TBD"},
+    {"id": "andrea",     "name": "Andrea",     "skill": "Painter"},
+    {"id": "serafettin", "name": "Serafettin", "skill": "TBD"},
+    {"id": "borja",      "name": "Borja",      "skill": "Hacker"},
+    {"id": "pablo",      "name": "Pablo",      "skill": "Athlete"},
+    {"id": "jesus",      "name": "Jesús",      "skill": "TBD"}
+  ],
+  "detective": "borja",
+  "alive": ["alba", "marco", "chechu", "mario", "angela", "andrea", "serafettin", "borja", "pablo", "jesus"],
+  "case_number": 1
+}

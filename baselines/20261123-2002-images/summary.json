@@ -1,0 +1,58 @@
+{
+  "runs": 6,
+  "success_rate": 0.3333333333333333,
+  "latency_p50_s": 3.475,
+  "latency_max_s": 3.85,
+  "interval_s": 46.0,
+  "keyed": false,
+  "rows": [
+    {
+      "run": 1,
+      "ok": false,
+      "status": 503,
+      "latency_s": 3.02,
+      "bytes": 0,
+      "error": "{\"status\":503,\"success\":false,\"error\":{\"code\":\"SERVICE_UNAVAILABLE\",\"message\":\"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a pollen key at https:"
+    },
+    {
+      "run": 2,
+      "ok": true,
+      "status": 200,
+      "latency_s": 3.85,
+      "bytes": 38404,
+      "error": null
+    },
+    {
+      "run": 3,
+      "ok": false,
+      "status": 503,
+      "latency_s": 2.89,
+      "bytes": 0,
+      "error": "{\"status\":503,\"success\":false,\"error\":{\"code\":\"SERVICE_UNAVAILABLE\",\"message\":\"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a pollen key at https:"
+    },
+    {
+      "run": 4,
+      "ok": false,
+      "status": 503,
+      "latency_s": 1.85,
+      "bytes": 0,
+      "error": "{\"status\":503,\"success\":false,\"error\":{\"code\":\"SERVICE_UNAVAILABLE\",\"message\":\"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a pollen key at https:"
+    },
+    {
+      "run": 5,
+      "ok": true,
+      "status": 200,
+      "latency_s": 3.1,
+      "bytes": 29811,
+      "error": null
+    },
+    {
+      "run": 6,
+      "ok": false,
+      "status": 503,
+      "latency_s": 1.63,
+      "bytes": 0,
+      "error": "{\"status\":503,\"success\":false,\"error\":{\"code\":\"SERVICE_UNAVAILABLE\",\"message\":\"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a pollen key at https:"
+    }
+  ]
+}
