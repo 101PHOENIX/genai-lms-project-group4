@@ -75,11 +75,14 @@ session.CompleteAction(npc, trustChange, revealedClues);
 | `unity/Assets/Scripts/Core/` | Engine-free rules: dice tiers, word limiter, trust, 7-round `CaseSession`, case-file model |
 | `unity/Assets/Scripts/Net/LiveImageQueue.cs` | Rate-limited image prefetch with timeout + offline fallback |
 | `tests/CoreTests/` | xUnit tests for Core (30 tests) |
+| `tests/injection/` | Fixed prompt-injection attack set for the NPCs and how to score it |
 | `baselines/` | Raw benchmark outputs, one folder per run, with `summary.json` / `audit.json` |
 | `dialogue/` | LLM-driven NPC dialogue module (schema proposal) |
 | `docs/ARCHITECTURE.md` | How the pieces fit, why they were built this way, known limits |
 | `docs/self_critique_jury.*` | Simulated 5-juror critique of the project (EN; `autocritica_jurado.*` is the ES version) |
 | `docs/TASK_DISTRIBUTION.md` | Workstreams, roles, checkpoints |
+| `docs/SUBMISSION.md` | Outline of the Moodle PDF, one section per rubric criterion, with its sources |
+| `.github/workflows/ci.yml` | Validates the sample case file and runs the Core tests on every PR |
 | `PROMPT_LOG.md` | Prompt iterations with justification. **Everyone adds entries** |
 | `ITERATION_LOG.md` | One row per change to a prompt, model, pipeline or build, with the KPI it moved |
 
