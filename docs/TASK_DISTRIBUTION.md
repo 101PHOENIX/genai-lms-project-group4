@@ -28,7 +28,7 @@ prompt examples"*. Keep it up to date as the work actually happens, not at the e
 
 | Name | GitHub | Workstream |
 |---|---|---|
-| Barahona Gomez, Borja | | |
+| Barahona Gomez, Borja | bbarahon | Case generator, validation & benchmarks, Core rules |
 | Bolaños Martinez, Pablo | | |
 | Guasch Espinosa, Alba | | |
 | Haag, Mario | | |
