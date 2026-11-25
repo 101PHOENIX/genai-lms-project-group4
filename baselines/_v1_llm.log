@@ -1,0 +1,13 @@
+   rate-limited (503), waiting 15s
+   rate-limited (503), waiting 30s
+run  1/10  FAIL  12.55s  ['invalid JSON: Unterminated string starting at: line 112 column 16 (char 3899)', 'retry failed: Expecting property name enclosed in double quotes: line 142 column 70 (char 4598)']
+   rate-limited (402), waiting 15s
+   rate-limited (402), waiting 30s
+run  2/10  JSON  10.01s  ['only 1 innocent NPC(s) lie/hide secrets (need >= 2)']
+   rate-limited (402), waiting 15s
+   rate-limited (402), waiting 30s
+run  3/10  JSON  9.92s  ["crime_scene_prompt not filter-safe: ['hanging']"]
+   rate-limited (402), waiting 15s
+   rate-limited (503), waiting 30s
+run  4/10  FAIL  10.13s  ['invalid JSON: Expecting value: line 1 column 3887 (char 3886)']
+   rate-limited (402), waiting 15s

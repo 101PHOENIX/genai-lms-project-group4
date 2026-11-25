@@ -1,0 +1,92 @@
+{
+  "aggregate": {
+    "files": 5,
+    "parsed": 4,
+    "logic_pass_rate": 0.0,
+    "solvable_rate": 0.8,
+    "solvable_le5_rate": 0.8,
+    "mean_p_enough_actions": 0.8,
+    "trivial_rate(<=1 action)": 0.4,
+    "proof_at_crime_scene_rate": 0.4,
+    "mean_full_evidence_actions": 2.0,
+    "mean_p_full_evidence": 0.8,
+    "singles_out_culprit_rate": 0.8,
+    "too_easy_rate": 0.4,
+    "key_false_overlap_rate": 0.0,
+    "filter_risk_rate": 0.0,
+    "derivative_host_rate": 0.0,
+    "case_types": {
+      "standard": 4
+    }
+  },
+  "rows": [
+    {
+      "logic_ok": false,
+      "case_type": "standard",
+      "solvable_min_actions": 2,
+      "p_enough_actions": 1.0,
+      "full_evidence_actions": 2,
+      "p_full_evidence": 1.0,
+      "proof_at_crime_scene": false,
+      "culprit_margin": 4,
+      "culprit_share": 1.0,
+      "skill_locked": 2,
+      "key_false_overlap": [],
+      "filter_risk_words": [],
+      "derivative_phrases": [],
+      "file": "run01.txt"
+    },
+    {
+      "error": "unreadable: Expecting value: line 122 column 7 (char 4896)",
+      "file": "run02.txt"
+    },
+    {
+      "logic_ok": false,
+      "case_type": "standard",
+      "solvable_min_actions": 1,
+      "p_enough_actions": 1.0,
+      "full_evidence_actions": 2,
+      "p_full_evidence": 1.0,
+      "proof_at_crime_scene": true,
+      "culprit_margin": 3,
+      "culprit_share": 1.0,
+      "skill_locked": 1,
+      "key_false_overlap": [],
+      "filter_risk_words": [],
+      "derivative_phrases": [],
+      "file": "run03.txt"
+    },
+    {
+      "logic_ok": false,
+      "case_type": "standard",
+      "solvable_min_actions": 1,
+      "p_enough_actions": 1.0,
+      "full_evidence_actions": 2,
+      "p_full_evidence": 1.0,
+      "proof_at_crime_scene": true,
+      "culprit_margin": 2,
+      "culprit_share": 0.75,
+      "skill_locked": 1,
+      "key_false_overlap": [],
+      "filter_risk_words": [],
+      "derivative_phrases": [],
+      "file": "run04.txt"
+    },
+    {
+      "logic_ok": false,
+      "case_type": "standard",
+      "solvable_min_actions": 2,
+      "p_enough_actions": 1.0,
+      "full_evidence_actions": 2,
+      "p_full_evidence": 1.0,
+      "proof_at_crime_scene": false,
+      "culprit_margin": 1,
+      "culprit_share": 0.5,
+      "skill_locked": 2,
+      "key_false_overlap": [],
+      "filter_risk_words": [],
+      "derivative_phrases": [],
+      "file": "run05.txt"
+    }
+  ]
+}

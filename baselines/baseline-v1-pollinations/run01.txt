@@ -1,0 +1,112 @@
+{
+  "case_number": 1,
+  "case_type": "standard",
+  "victim": "angela",
+  "killer": "serafettin",
+  "accomplice": null,
+  "weapon": "fabric rope",
+  "motive": "jealousy over a secret art commission",
+  "crime_location": "library",
+  "time_of_death": "21:15",
+  "truth_summary": "Serafettin, frustrated over losing an art commission, lured Angela into the library under the pretense of a study session. He bound her with a fabric rope, then used a torn book page to convince her that a sudden sneezing fit would make her collapse. The rope tightened as she fell, leading to her unconsciousness. The rope was disposed of in the courtyard after the act.",
+  "crime_scene_prompt": "An empty study desk with scattered papers, a bound chair, and a faint trail of fabric fibers leading to the door.",
+  "host_announcement": "A haunting silence falls over the school as rumors of a tragic incident echo through the halls.",
+  "key_clues": [
+    {
+      "id": "k1",
+      "name": "Freshly painted gym shoes",
+      "location": "gym",
+      "description": "Recently repainted shoes found near the library exit, matching the workshop style of Serafettin.",
+      "points_to": "serafettin",
+      "requires_skill": null,
+      "image_prompt": "close-up of gym shoes with bright red paint"
+    },
+    {
+      "id": "k2",
+      "name": "Coffee stains on library book",
+      "location": "library",
+      "description": "A thick coffee stain on page 42 of a borrowed novel, recognizable as the tea Alexia uses.",
+      "points_to": "serafettin",
+      "requires_skill": null,
+      "image_prompt": "close-up of a book with coffee spots"
+    },
+    {
+      "id": "k3",
+      "name": "Encrypted USB drive",
+      "location": "cafeteria",
+      "description": "A USB drive hidden in a cafeteria drawer, containing images of a private art plateau.",
+      "points_to": "serafettin",
+      "requires_skill": "Hacker",
+      "image_prompt": "close-up of a USB drive on a desk"
+    },
+    {
+      "id": "k4",
+      "name": "Torn book page",
+      "location": "dorm_andrea",
+      "description": "A torn page from an art journal found in Andrea's dorm, showing sketches of a rope loop.",
+      "points_to": "serafettin",
+      "requires_skill": null,
+      "image_prompt": "close-up of a torn page with a rope diagram"
+    }
+  ],
+  "minor_clues": [
+    {
+      "id": "m1",
+      "location": "infirmary",
+      "description": "A faint scent of fabric dye lingering in the air.",
+      "source": "scene"
+    },
+    {
+      "id": "m2",
+      "location": "gym",
+      "description": "Footprints leading from the gym to the library exit.",
+      "source": "infirmary"
+    },
+    {
+      "id": "m3",
+      "location": "cafeteria",
+      "description": "A half-finished coffee cup left on the corner table.",
+      "source": "scene"
+    }
+  ],
+  "false_clues": [
+    {
+      "id": "f1",
+      "location": "dorm_pablo",
+      "description": "An accidental spill of orange juice on Pablo's bookshelf.",
+      "planted_by": "chechu",
+      "points_to": "pablo"
+    },
+    {
+      "id": "f2",
+      "location": "dorm_alba",
+      "description": "A misplaced sketchbook with a mysterious doodle.",
+      "planted_by": "marco",
+      "points_to": "alba"
+    }
+  ],
+  "npc_secrets": [
+    {
+      "character": "alba",
+      "alibi": "Shut down in the courtyard from 20:00 to 21:30 over a chess game.",
+      "is_lying": true,
+      "secret": "She saw Serafettin leaving the library at 21:10.",
+      "knows": ["k2"]
+    },
+    {
+      "character": "marco",
+      "alibi": "In the gym practicing batting drills.",
+      "is_lying": false,
+      "secret": "Nothing relevant.",
+      "knows": []
+    },
+    {
+      "character": "chechu",
+      "alibi": "Preparing lunch in the cafeteria.",
+      "is_lying": false,
+      "secret": "Has a recipe for a spicy sauce.",
+      "knows": []
+    },
+    {
+      "character": "mario",
+      "alibi": "Reading in the library

@@ -1,0 +1,11 @@
+run 1/12 ok=True status=200 3.6s 
+run 2/12 ok=True status=200 0.24s 
+run 3/12 ok=True status=200 2.98s 
+run 4/12 ok=True status=200 3.55s 
+run 5/12 ok=True status=200 0.28s 
+run 6/12 ok=True status=200 4.48s 
+run 7/12 ok=False status=503 1.87s {"status":503,"success":false,"error":{"code":"SERVICE_UNAVAILABLE","message":"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a polle
+run 8/12 ok=False status=503 1.58s {"status":503,"success":false,"error":{"code":"SERVICE_UNAVAILABLE","message":"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a polle
+run 9/12 ok=False status=503 2.0s {"status":503,"success":false,"error":{"code":"SERVICE_UNAVAILABLE","message":"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a pollen
+run 10/12 ok=False status=503 2.29s {"status":503,"success":false,"error":{"code":"SERVICE_UNAVAILABLE","message":"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a poll
+run 11/12 ok=False status=503 1.22s {"status":503,"success":false,"error":{"code":"SERVICE_UNAVAILABLE","message":"The Classic API is at its limit right now. Retry after 10s, or get full access to every model with a poll
