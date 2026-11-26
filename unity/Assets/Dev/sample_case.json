@@ -1,0 +1,41 @@
+{
+  "case_number": 1,
+  "case_type": "standard",
+  "victim": "mario",
+  "killer": "jesus",
+  "accomplice": null,
+  "weapon": "a heavy brass library bookend",
+  "motive": "Mario discovered that Jesús forged the entrance exam that got him into the school and threatened to tell the Host.",
+  "crime_location": "library",
+  "time_of_death": "23:40",
+  "truth_summary": "Jesús asked Mario to meet in the library at 23:30 to 'talk it over'. When Mario refused to stay quiet, Jesús struck him with a brass bookend from the history shelf. He wiped the bookend, hid it in the infirmary laundry basket and tore the page of the sign-out log that showed his name. He then planted Chechu's apron button near the body.",
+  "crime_scene_prompt": "unconscious anime boy with brown hair lying face down between tall library bookshelves, toppled wooden chair, scattered books, splashes of bright neon pink liquid on the floor, green desk lamps, dramatic shadows",
+  "host_announcement": "Ding-dong! A body has been discovered in the Library! The investigation begins... now!",
+  "key_clues": [
+    {"id": "k1", "name": "Torn sign-out log", "location": "library", "description": "The library sign-out log has its 23:00-24:00 page torn out. A faint pen impression of a 'J' remains on the next page.", "points_to": "jesus", "requires_skill": null, "image_prompt": "a library sign-out ledger with one page torn out, pen impressions on the next page, wooden desk"},
+    {"id": "k2", "name": "Wiped brass bookend", "location": "infirmary", "description": "A brass bookend from the library, smelling of disinfectant, hidden in the infirmary laundry basket. One corner is dented.", "points_to": "jesus", "requires_skill": null, "image_prompt": "a dented brass owl bookend half hidden among white towels in a laundry basket"},
+    {"id": "k3", "name": "Forged exam sheet", "location": "dorm_mario", "description": "Mario kept a copy of Jesús's entrance exam with a different handwriting on the answers and a note: 'Tell the Host tomorrow.'", "points_to": "jesus", "requires_skill": null, "image_prompt": "an exam paper with two different handwritings and a sticky note, on a dormitory desk"},
+    {"id": "k4", "name": "Deleted message", "location": "dorm_jesus", "description": "Jesús's tablet: a deleted message to Mario, 'Library, 23:30. Come alone.'", "points_to": "jesus", "requires_skill": "Hacker", "image_prompt": "a cracked tablet screen showing a chat app with a deleted message icon, neon glow"},
+    {"id": "k5", "name": "Planted apron button", "location": "library", "description": "A chef-apron button near the body. Its thread was cut cleanly with scissors, not torn in a struggle.", "points_to": "chechu", "requires_skill": null, "image_prompt": "a single black apron button with a cleanly cut thread on a wooden floor, spotlight"}
+  ],
+  "minor_clues": [
+    {"id": "m1", "location": "cafeteria", "description": "Chechu was cleaning the kitchen until midnight; the dishwasher log confirms it.", "source": "chechu"},
+    {"id": "m2", "location": "courtyard", "description": "Pablo heard running footsteps toward the infirmary at about 23:45.", "source": "pablo"},
+    {"id": "m3", "location": "dorm_angela", "description": "Ángela was sneaking out to the gym to practice; she hides it because it breaks curfew.", "source": "angela"},
+    {"id": "m4", "location": "library", "description": "A history shelf has a gap where one of two matching brass bookends should be.", "source": "scene"}
+  ],
+  "false_clues": [
+    {"id": "f1", "location": "library", "description": "Chechu's apron button found by the body.", "planted_by": "jesus", "points_to": "chechu"},
+    {"id": "f2", "location": "dorm_andrea", "description": "A painting of Mario with his face scratched out.", "planted_by": "marco", "points_to": "andrea"}
+  ],
+  "npc_secrets": [
+    {"character": "jesus", "alibi": "I was asleep in my dorm from 22:30.", "is_lying": true, "secret": "Killed Mario to protect his forged exam.", "knows": ["k1", "k2"]},
+    {"character": "chechu", "alibi": "Cleaning the kitchen until midnight.", "is_lying": false, "secret": "Lost an apron button earlier that day in the hallway.", "knows": ["m1"]},
+    {"character": "marco", "alibi": "Studying in the classroom.", "is_lying": true, "secret": "Had a grudge against Andrea and planted the scratched painting to frame her.", "knows": ["f2"]},
+    {"character": "angela", "alibi": "In bed all night.", "is_lying": true, "secret": "Was in the gym breaking curfew; saw Jesús pass by at 23:25.", "knows": ["m3", "k1"]},
+    {"character": "pablo", "alibi": "Jogging in the courtyard.", "is_lying": false, "secret": "None relevant.", "knows": ["m2"]},
+    {"character": "andrea", "alibi": "Painting in her dorm.", "is_lying": false, "secret": "Fought with Mario last week about a painting.", "knows": []},
+    {"character": "alba", "alibi": "Reading in the cafeteria.", "is_lying": false, "secret": "Saw the infirmary door open at 23:50.", "knows": ["m4"]},
+    {"character": "serafettin", "alibi": "Fixing the courtyard fountain.", "is_lying": false, "secret": "Heard Mario say he'd 'tell the Host everything tomorrow'.", "knows": ["k3"]}
+  ]
+}

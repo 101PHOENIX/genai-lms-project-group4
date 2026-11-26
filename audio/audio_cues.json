@@ -1,0 +1,53 @@
+{
+  "_note": "Team 3 (Audio). Contract between tools/generate_audio.py and Unity. Music ids must match the constants in unity/Assets/Scripts/Core/MusicCues.cs; SFX ids must match SfxPlayer.Ids. Never name artists, composers, songs or game franchises in a prompt (provider terms + the derivative-identity issue in docs/ARCHITECTURE.md).",
+  "version": "v0",
+  "music_style": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics.",
+  "loop_rules": "Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+  "music": [
+    {
+      "id": "exploration",
+      "prompt": "Mysterious, curious and slightly playful. Soft pizzicato strings, celesta, muted piano and light brushed percussion. Calm unease, like walking empty school corridors at night.",
+      "duration_s": 60, "bpm": 90, "key": "D minor", "loop": true
+    },
+    {
+      "id": "crime_discovery",
+      "prompt": "Sudden shock settling into dread. Low sustained strings, deep piano clusters, a ticking clock and distant metallic hits. Tense and eerie, never violent.",
+      "duration_s": 30, "bpm": 70, "key": "C minor", "loop": true
+    },
+    {
+      "id": "investigation",
+      "prompt": "Focused, suspenseful detective groove. Steady synth bass pulse, clean electric piano, crisp hi-hats and short string stabs. Thinking music, not action music.",
+      "duration_s": 75, "bpm": 100, "key": "A minor", "loop": true
+    },
+    {
+      "id": "investigation_late",
+      "prompt": "Urgent detective groove, time is running out. Driving synth bass ostinato, fast hi-hats, rising string tremolo and a heartbeat kick drum.",
+      "duration_s": 60, "bpm": 112, "key": "A minor", "loop": true
+    },
+    {
+      "id": "trial",
+      "prompt": "Dramatic, confrontational debate theme. Driving orchestral string ostinato, punchy taiko and snare, bold brass hits over an electronic beat. High contrast and high stakes.",
+      "duration_s": 75, "bpm": 128, "key": "E minor", "loop": true
+    },
+    {
+      "id": "victory",
+      "prompt": "Short triumphant resolution with bright brass and strings, a feeling of relief, ending on a clear final chord.",
+      "duration_s": 10, "loop": false
+    },
+    {
+      "id": "game_over",
+      "prompt": "Short dark ending with a descending piano line over low strings, finishing on one long low note.",
+      "duration_s": 10, "loop": false
+    }
+  ],
+  "sfx": [
+    {"id": "dice_roll", "prompt": "A single plastic six-sided die rolling and bouncing on a wooden table, then settling.", "duration_s": 1.5, "loop": false},
+    {"id": "body_alarm", "prompt": "Loud old school bell alarm ringing urgently in an empty corridor, long reverb tail.", "duration_s": 4, "loop": false},
+    {"id": "footsteps", "prompt": "Footsteps of school shoes walking at a steady pace on a wooden corridor floor.", "duration_s": 3, "loop": false},
+    {"id": "door_open", "prompt": "Heavy wooden classroom door creaking open slowly.", "duration_s": 2, "loop": false},
+    {"id": "clue_found", "prompt": "Short bright sparkling chime for discovering a clue, video game interface sound.", "duration_s": 1.5, "loop": false},
+    {"id": "dialogue_blip", "prompt": "Very short soft synth blip for text appearing in a dialogue box, retro game interface.", "duration_s": 0.5, "loop": false},
+    {"id": "verdict_correct", "prompt": "Gavel strike followed by a short rising triumphant brass sting.", "duration_s": 3, "loop": false},
+    {"id": "verdict_wrong", "prompt": "Gavel strike followed by a short low descending dissonant sting.", "duration_s": 3, "loop": false}
+  ]
+}
