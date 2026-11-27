@@ -1,0 +1,128 @@
+{
+  "provider": "acestep",
+  "licence": "MIT (ACE-Step 1.5)",
+  "settings": {
+    "base_url": "http://127.0.0.1:8001",
+    "lyrics": "[Instrumental]",
+    "audio_format": "mp3"
+  },
+  "manifest_version": "v0",
+  "candidates_per_cue": 3,
+  "aborted": null,
+  "runs": 9,
+  "success_rate": 1.0,
+  "latency_p50_s": 255.73,
+  "latency_max_s": 518.61,
+  "generated_audio_s": 285.0,
+  "ok_per_cue": {
+    "trial": 3,
+    "victory": 3,
+    "game_over": 3
+  },
+  "prompts": {
+    "trial": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Dramatic, confrontational debate theme. Driving orchestral string ostinato, punchy taiko and snare, bold brass hits over an electronic beat. High contrast and high stakes. 128 BPM. Key of E minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "victory": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Short triumphant resolution with bright brass and strings, a feeling of relief, ending on a clear final chord.",
+    "game_over": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Short dark ending with a descending piano line over low strings, finishing on one long low note."
+  },
+  "rows": [
+    {
+      "cue": "trial",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 518.61,
+      "bytes": 1200813,
+      "file": "trial_c01.mp3",
+      "requested_s": 75.0,
+      "error": null
+    },
+    {
+      "cue": "trial",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 265.46,
+      "bytes": 1200813,
+      "file": "trial_c02.mp3",
+      "requested_s": 75.0,
+      "error": null
+    },
+    {
+      "cue": "trial",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 267.63,
+      "bytes": 1200813,
+      "file": "trial_c03.mp3",
+      "requested_s": 75.0,
+      "error": null
+    },
+    {
+      "cue": "victory",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 256.6,
+      "bytes": 160941,
+      "file": "victory_c01.mp3",
+      "requested_s": 10.0,
+      "error": null
+    },
+    {
+      "cue": "victory",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 255.73,
+      "bytes": 160941,
+      "file": "victory_c02.mp3",
+      "requested_s": 10.0,
+      "error": null
+    },
+    {
+      "cue": "victory",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 249.63,
+      "bytes": 160941,
+      "file": "victory_c03.mp3",
+      "requested_s": 10.0,
+      "error": null
+    },
+    {
+      "cue": "game_over",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 249.74,
+      "bytes": 160941,
+      "file": "game_over_c01.mp3",
+      "requested_s": 10.0,
+      "error": null
+    },
+    {
+      "cue": "game_over",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 250.65,
+      "bytes": 160941,
+      "file": "game_over_c02.mp3",
+      "requested_s": 10.0,
+      "error": null
+    },
+    {
+      "cue": "game_over",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 252.94,
+      "bytes": 160941,
+      "file": "game_over_c03.mp3",
+      "requested_s": 10.0,
+      "error": null
+    }
+  ]
+}

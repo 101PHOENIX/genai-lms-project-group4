@@ -1,0 +1,248 @@
+{
+ "qc_version": 1,
+ "files": {
+  "dice_roll_c01.wav": {
+   "stamp": [
+    352844,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 77,
+    "duration_s": 2.0,
+    "requested_s": 2.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -27.3,
+    "peak_dbfs": -1.86,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.97,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -27.3 LUFS (< -26)"
+     }
+    ]
+   }
+  },
+  "dice_roll_c02.wav": {
+   "stamp": [
+    352844,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 76,
+    "duration_s": 2.0,
+    "requested_s": 2.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -27.7,
+    "peak_dbfs": -4.64,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 1.01,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -27.7 LUFS (< -26)"
+     }
+    ]
+   }
+  },
+  "dice_roll_c03.wav": {
+   "stamp": [
+    352844,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 77,
+    "duration_s": 2.0,
+    "requested_s": 2.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -27.1,
+    "peak_dbfs": -3.37,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.81,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -27.1 LUFS (< -26)"
+     }
+    ]
+   }
+  },
+  "body_alarm_c01.wav": {
+   "stamp": [
+    705644,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 94,
+    "duration_s": 4.0,
+    "requested_s": 4.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -22.5,
+    "peak_dbfs": -12.13,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.04,
+    "tail_silence_s": 1.26,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "body_alarm_c02.wav": {
+   "stamp": [
+    705644,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 95,
+    "duration_s": 4.0,
+    "requested_s": 4.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -21.4,
+    "peak_dbfs": -9.56,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.12,
+    "tail_silence_s": 1.38,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "body_alarm_c03.wav": {
+   "stamp": [
+    705644,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 95,
+    "duration_s": 4.0,
+    "requested_s": 4.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -21.1,
+    "peak_dbfs": -9.54,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 1.31,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "verdict_wrong_c01.wav": {
+   "stamp": [
+    529244,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 81,
+    "duration_s": 3.0,
+    "requested_s": 3.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -22.9,
+    "peak_dbfs": -4.32,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.57,
+    "tail_silence_s": 0.57,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "warn",
+      "message": "one-shot starts 0.57s late"
+     }
+    ]
+   }
+  },
+  "verdict_wrong_c02.wav": {
+   "stamp": [
+    529244,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 79,
+    "duration_s": 3.0,
+    "requested_s": 3.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -25.2,
+    "peak_dbfs": -3.23,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.6,
+    "tail_silence_s": 1.02,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "warn",
+      "message": "one-shot starts 0.60s late"
+     }
+    ]
+   }
+  },
+  "verdict_wrong_c03.wav": {
+   "stamp": [
+    529244,
+    1795820223
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 83,
+    "duration_s": 3.0,
+    "requested_s": 3.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -20.8,
+    "peak_dbfs": -0.67,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.57,
+    "tail_silence_s": 0.87,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "warn",
+      "message": "one-shot starts 0.57s late"
+     }
+    ]
+   }
+  }
+ }
+}

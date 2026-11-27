@@ -1,0 +1,333 @@
+{
+  "game_over": {
+    "file": "unity/Assets/Audio/Music/game_over.mp3",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261127-2115-audio-acestep-part2",
+    "take": 2,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Short dark ending with a descending piano line over low strings, finishing on one long low note.",
+    "seed": null,
+    "latency_s": 250.65,
+    "manifest_version": "v0",
+    "qc_status": "pass",
+    "qc_score": 98,
+    "run_date": "2026-11-27T21:15",
+    "approved_at": "2026-11-27T22:28:20",
+    "promoted_at": "2026-11-27T22:28:20"
+  },
+  "exploration": {
+    "file": "unity/Assets/Audio/Music/exploration.wav",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261127-1942-audio-acestep",
+    "take": 4,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Mysterious, curious and slightly playful. Soft pizzicato strings, celesta, muted piano and light brushed percussion. Calm unease, like walking empty school corridors at night. 90 BPM. Key of D minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "seed": null,
+    "latency_s": null,
+    "manifest_version": "v0",
+    "derived_from": "exploration_c01.mp3",
+    "edit": "trim",
+    "trim_s": {
+      "head": 0.02,
+      "tail": 4.25
+    },
+    "qc_status": "warn",
+    "qc_score": 66,
+    "run_date": "2026-11-27T19:42",
+    "approved_at": "2026-11-27T22:57:04",
+    "promoted_at": "2026-11-27T22:57:04"
+  },
+  "crime_discovery": {
+    "file": "unity/Assets/Audio/Music/crime_discovery.wav",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261127-1942-audio-acestep",
+    "take": 4,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Sudden shock settling into dread. Low sustained strings, deep piano clusters, a ticking clock and distant metallic hits. Tense and eerie, never violent. 70 BPM. Key of C minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "seed": null,
+    "latency_s": null,
+    "manifest_version": "v0",
+    "derived_from": "crime_discovery_c01.mp3",
+    "edit": "trim",
+    "trim_s": {
+      "head": 0.01,
+      "tail": 1.63
+    },
+    "qc_status": "warn",
+    "qc_score": 84,
+    "run_date": "2026-11-27T19:42",
+    "approved_at": "2026-11-27T22:59:25",
+    "promoted_at": "2026-11-27T22:59:25"
+  },
+  "investigation": {
+    "file": "unity/Assets/Audio/Music/investigation.wav",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261127-1942-audio-acestep",
+    "take": 5,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Focused, suspenseful detective groove. Steady synth bass pulse, clean electric piano, crisp hi-hats and short string stabs. Thinking music, not action music. 100 BPM. Key of A minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "seed": null,
+    "latency_s": null,
+    "manifest_version": "v0",
+    "derived_from": "investigation_c02.mp3",
+    "edit": "trim",
+    "trim_s": {
+      "head": 0.01,
+      "tail": 2.91
+    },
+    "qc_status": "warn",
+    "qc_score": 70,
+    "run_date": "2026-11-27T19:42",
+    "approved_at": "2026-11-27T23:01:26",
+    "promoted_at": "2026-11-27T23:01:26"
+  },
+  "investigation_late": {
+    "file": "unity/Assets/Audio/Music/investigation_late.wav",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261127-1942-audio-acestep",
+    "take": 4,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Urgent detective groove, time is running out. Driving synth bass ostinato, fast hi-hats, rising string tremolo and a heartbeat kick drum. 112 BPM. Key of A minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "seed": null,
+    "latency_s": null,
+    "manifest_version": "v0",
+    "derived_from": "investigation_late_c01.mp3",
+    "edit": "trim",
+    "trim_s": {
+      "head": 0.0,
+      "tail": 6.92
+    },
+    "qc_status": "warn",
+    "qc_score": 69,
+    "run_date": "2026-11-27T19:42",
+    "approved_at": "2026-11-27T23:04:12",
+    "promoted_at": "2026-11-27T23:04:12"
+  },
+  "trial": {
+    "file": "unity/Assets/Audio/Music/trial.wav",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261126-2045-audio-acestep",
+    "take": 2,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Dramatic, confrontational debate theme. Driving orchestral string ostinato, punchy taiko and snare, bold brass hits over an electronic beat. High contrast and high stakes. 128 BPM. Key of E minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "seed": null,
+    "latency_s": null,
+    "manifest_version": "v0",
+    "derived_from": "trial_c01.mp3",
+    "edit": "trim",
+    "trim_s": {
+      "head": 0.05,
+      "tail": 1.44
+    },
+    "qc_status": "warn",
+    "qc_score": 63,
+    "run_date": "2026-11-26T20:45",
+    "approved_at": "2026-11-27T23:15:25",
+    "promoted_at": "2026-11-27T23:15:25"
+  },
+  "victory": {
+    "file": "unity/Assets/Audio/Music/victory.mp3",
+    "provider": "acestep",
+    "licence": "MIT (ACE-Step 1.5)",
+    "settings": {
+      "base_url": "http://127.0.0.1:8001",
+      "lyrics": "[Instrumental]",
+      "audio_format": "mp3"
+    },
+    "run": "20261126-2045-audio-acestep",
+    "take": 2,
+    "prompt": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Short triumphant resolution with bright brass and strings, a feeling of relief, ending on a clear final chord.",
+    "seed": null,
+    "latency_s": null,
+    "manifest_version": "v0",
+    "qc_status": "pass",
+    "qc_score": 98,
+    "run_date": "2026-11-26T20:45",
+    "approved_at": "2026-11-27T23:15:25",
+    "promoted_at": "2026-11-27T23:15:25"
+  },
+  "footsteps": {
+    "file": "unity/Assets/Audio/SFX/footsteps.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio",
+    "take": 3,
+    "prompt": "Footsteps of school shoes walking at a steady pace on a wooden corridor floor.",
+    "seed": 98930,
+    "latency_s": 25.31,
+    "manifest_version": "v0",
+    "qc_status": "warn",
+    "qc_score": 73,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:44:18",
+    "promoted_at": "2026-11-27T23:44:18"
+  },
+  "door_open": {
+    "file": "unity/Assets/Audio/SFX/door_open.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio",
+    "take": 1,
+    "prompt": "Heavy wooden classroom door creaking open slowly.",
+    "seed": 63697,
+    "latency_s": 24.14,
+    "manifest_version": "v0",
+    "qc_status": "fail",
+    "qc_score": 45,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:44:42",
+    "promoted_at": "2026-11-27T23:44:42"
+  },
+  "clue_found": {
+    "file": "unity/Assets/Audio/SFX/clue_found.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio",
+    "take": 2,
+    "prompt": "Short bright sparkling chime for discovering a clue, video game interface sound.",
+    "seed": 54630,
+    "latency_s": 26.92,
+    "manifest_version": "v0",
+    "qc_status": "fail",
+    "qc_score": 35,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:45:11",
+    "promoted_at": "2026-11-27T23:45:11"
+  },
+  "verdict_correct": {
+    "file": "unity/Assets/Audio/SFX/verdict_correct.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio",
+    "take": 3,
+    "prompt": "Gavel strike followed by a short rising triumphant brass sting.",
+    "seed": 67675,
+    "latency_s": 25.64,
+    "manifest_version": "v0",
+    "qc_status": "pass",
+    "qc_score": 98,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:45:40",
+    "promoted_at": "2026-11-27T23:45:40"
+  },
+  "dice_roll": {
+    "file": "unity/Assets/Audio/SFX/dice_roll.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio-2",
+    "take": 3,
+    "prompt": "Board game wooden dice bouncing and clattering onto a hard wooden table, several fast hollow wood taps slowing down to a stop, crisp foley sound effect, close mic, dry room.",
+    "seed": 71655,
+    "latency_s": 24.4,
+    "manifest_version": "v0",
+    "qc_status": "warn",
+    "qc_score": 77,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:57:28",
+    "promoted_at": "2026-11-27T23:57:28"
+  },
+  "body_alarm": {
+    "file": "unity/Assets/Audio/SFX/body_alarm.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio-2",
+    "take": 2,
+    "prompt": "Loud old school bell alarm ringing urgently in an empty corridor, long reverb tail.",
+    "seed": 1125,
+    "latency_s": 26.63,
+    "manifest_version": "v0",
+    "qc_status": "pass",
+    "qc_score": 95,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:57:45",
+    "promoted_at": "2026-11-27T23:57:45"
+  },
+  "verdict_wrong": {
+    "file": "unity/Assets/Audio/SFX/verdict_wrong.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261127-2326-audio-stable-audio-2",
+    "take": 2,
+    "prompt": "Gavel strike followed by a short low descending dissonant sting.",
+    "seed": 40860,
+    "latency_s": 25.64,
+    "manifest_version": "v0",
+    "qc_status": "warn",
+    "qc_score": 79,
+    "run_date": "2026-11-27T23:26",
+    "approved_at": "2026-11-27T23:58:01",
+    "promoted_at": "2026-11-27T23:58:02"
+  }
+}

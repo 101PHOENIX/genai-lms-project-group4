@@ -1,0 +1,300 @@
+{
+ "qc_version": 1,
+ "files": {
+  "trial_c01.mp3": {
+   "stamp": [
+    1200813,
+    1795813701
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 14,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.4,
+    "peak_dbfs": -2.22,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 4.77,
+    "max_jump_lu": 25.9,
+    "seam": {
+     "level_step_db": 9.8,
+     "click_ratio": 0.11,
+     "spectral_distance": 0.962
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 4.77s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 25.9 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 9.8 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.96)"
+     }
+    ]
+   }
+  },
+  "trial_c02.mp3": {
+   "stamp": [
+    1200813,
+    1795813702
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 12,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -17.7,
+    "peak_dbfs": -2.04,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 1.94,
+    "max_jump_lu": 13.7,
+    "seam": {
+     "level_step_db": 10.82,
+     "click_ratio": 0.26,
+     "spectral_distance": 0.963
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 1.94s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 13.7 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 10.8 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.96)"
+     }
+    ]
+   }
+  },
+  "trial_c03.mp3": {
+   "stamp": [
+    1200813,
+    1795813702
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 15,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -12.8,
+    "peak_dbfs": -1.07,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.23,
+    "tail_silence_s": 2.53,
+    "max_jump_lu": 9.6,
+    "seam": {
+     "level_step_db": 0.0,
+     "click_ratio": 8.15,
+     "spectral_distance": 0.952
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 2.53s of silence"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "click at the loop seam (x8.2 the usual step)"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.95)"
+     }
+    ]
+   }
+  },
+  "victory_c01.mp3": {
+   "stamp": [
+    160941,
+    1795813702
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 85,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.3,
+    "peak_dbfs": -1.26,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 2.34,
+    "max_jump_lu": 11.5,
+    "seam": null,
+    "issues": [
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 11.5 LU between 3 s windows"
+     }
+    ]
+   }
+  },
+  "victory_c02.mp3": {
+   "stamp": [
+    160941,
+    1795813702
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 86,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.2,
+    "peak_dbfs": -1.54,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 2.44,
+    "max_jump_lu": 14.7,
+    "seam": null,
+    "issues": [
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 14.7 LU between 3 s windows"
+     }
+    ]
+   }
+  },
+  "victory_c03.mp3": {
+   "stamp": [
+    160941,
+    1795813702
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 98,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.2,
+    "peak_dbfs": -1.32,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 2.05,
+    "max_jump_lu": 4.0,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "game_over_c01.mp3": {
+   "stamp": [
+    160941,
+    1795813702
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 99,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -15.1,
+    "peak_dbfs": -1.37,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 2.73,
+    "max_jump_lu": 9.1,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "game_over_c02.mp3": {
+   "stamp": [
+    160941,
+    1795813702
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 98,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -17.9,
+    "peak_dbfs": -1.4,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 4.07,
+    "max_jump_lu": 2.7,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "game_over_c03.mp3": {
+   "stamp": [
+    160941,
+    1795813702
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 86,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.0,
+    "peak_dbfs": -1.27,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.04,
+    "tail_silence_s": 4.13,
+    "max_jump_lu": 10.6,
+    "seam": null,
+    "issues": [
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 10.6 LU between 3 s windows"
+     }
+    ]
+   }
+  }
+ }
+}

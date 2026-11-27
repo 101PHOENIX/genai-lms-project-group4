@@ -1,0 +1,410 @@
+{
+  "provider": "acestep",
+  "licence": "MIT (ACE-Step 1.5)",
+  "settings": {
+    "base_url": "http://127.0.0.1:8001",
+    "lyrics": "[Instrumental]",
+    "audio_format": "mp3"
+  },
+  "manifest_version": "v0",
+  "candidates_per_cue": 3,
+  "aborted": null,
+  "runs": 12,
+  "success_rate": 1.0,
+  "latency_p50_s": 262.0,
+  "latency_max_s": 270.0,
+  "generated_audio_s": 675.0,
+  "ok_per_cue": {
+    "exploration": 6,
+    "crime_discovery": 6,
+    "investigation": 6,
+    "investigation_late": 6
+  },
+  "prompts": {
+    "exploration": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Mysterious, curious and slightly playful. Soft pizzicato strings, celesta, muted piano and light brushed percussion. Calm unease, like walking empty school corridors at night. 90 BPM. Key of D minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "crime_discovery": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Sudden shock settling into dread. Low sustained strings, deep piano clusters, a ticking clock and distant metallic hits. Tense and eerie, never violent. 70 BPM. Key of C minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "investigation": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Focused, suspenseful detective groove. Steady synth bass pulse, clean electric piano, crisp hi-hats and short string stabs. Thinking music, not action music. 100 BPM. Key of A minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "investigation_late": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Urgent detective groove, time is running out. Driving synth bass ostinato, fast hi-hats, rising string tremolo and a heartbeat kick drum. 112 BPM. Key of A minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly."
+  },
+  "rows": [
+    {
+      "cue": "exploration",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 960813,
+      "file": "exploration_c01.mp3",
+      "requested_s": 60.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "exploration",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 266.0,
+      "bytes": 960813,
+      "file": "exploration_c02.mp3",
+      "requested_s": 60.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "exploration",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 270.0,
+      "bytes": 960813,
+      "file": "exploration_c03.mp3",
+      "requested_s": 60.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "crime_discovery",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 262.0,
+      "bytes": 480813,
+      "file": "crime_discovery_c01.mp3",
+      "requested_s": 30.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "crime_discovery",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 256.0,
+      "bytes": 480813,
+      "file": "crime_discovery_c02.mp3",
+      "requested_s": 30.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "crime_discovery",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 262.0,
+      "bytes": 480813,
+      "file": "crime_discovery_c03.mp3",
+      "requested_s": 30.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "investigation",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 268.0,
+      "bytes": 1200813,
+      "file": "investigation_c01.mp3",
+      "requested_s": 75.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "investigation",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 266.0,
+      "bytes": 1200813,
+      "file": "investigation_c02.mp3",
+      "requested_s": 75.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "investigation",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 262.0,
+      "bytes": 1200813,
+      "file": "investigation_c03.mp3",
+      "requested_s": 75.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "investigation_late",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 258.0,
+      "bytes": 960813,
+      "file": "investigation_late_c01.mp3",
+      "requested_s": 60.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "investigation_late",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 260.0,
+      "bytes": 960813,
+      "file": "investigation_late_c02.mp3",
+      "requested_s": 60.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "investigation_late",
+      "kind": "music",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 256.0,
+      "bytes": 960813,
+      "file": "investigation_late_c03.mp3",
+      "requested_s": 60.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "exploration",
+      "kind": "music",
+      "candidate": 4,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 10700204,
+      "file": "exploration_c04.wav",
+      "requested_s": 55.73,
+      "seed": null,
+      "error": null,
+      "derived_from": "exploration_c01.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.02,
+        "tail": 4.25
+      },
+      "original_requested_s": 60.0
+    },
+    {
+      "cue": "exploration",
+      "kind": "music",
+      "candidate": 5,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 10790444,
+      "file": "exploration_c05.wav",
+      "requested_s": 56.2,
+      "seed": null,
+      "error": null,
+      "derived_from": "exploration_c02.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.7,
+        "tail": 3.1
+      },
+      "original_requested_s": 60.0
+    },
+    {
+      "cue": "exploration",
+      "kind": "music",
+      "candidate": 6,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 10318124,
+      "file": "exploration_c06.wav",
+      "requested_s": 53.74,
+      "seed": null,
+      "error": null,
+      "derived_from": "exploration_c03.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.0,
+        "tail": 6.26
+      },
+      "original_requested_s": 60.0
+    },
+    {
+      "cue": "crime_discovery",
+      "kind": "music",
+      "candidate": 4,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 5445164,
+      "file": "crime_discovery_c04.wav",
+      "requested_s": 28.36,
+      "seed": null,
+      "error": null,
+      "derived_from": "crime_discovery_c01.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.01,
+        "tail": 1.63
+      },
+      "original_requested_s": 30.0
+    },
+    {
+      "cue": "crime_discovery",
+      "kind": "music",
+      "candidate": 5,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 4638764,
+      "file": "crime_discovery_c05.wav",
+      "requested_s": 24.16,
+      "seed": null,
+      "error": null,
+      "derived_from": "crime_discovery_c02.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.0,
+        "tail": 5.84
+      },
+      "original_requested_s": 30.0
+    },
+    {
+      "cue": "crime_discovery",
+      "kind": "music",
+      "candidate": 6,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 4884524,
+      "file": "crime_discovery_c06.wav",
+      "requested_s": 25.44,
+      "seed": null,
+      "error": null,
+      "derived_from": "crime_discovery_c03.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.0,
+        "tail": 4.56
+      },
+      "original_requested_s": 30.0
+    },
+    {
+      "cue": "investigation",
+      "kind": "music",
+      "candidate": 4,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 13488044,
+      "file": "investigation_c04.wav",
+      "requested_s": 70.25,
+      "seed": null,
+      "error": null,
+      "derived_from": "investigation_c01.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.0,
+        "tail": 4.75
+      },
+      "original_requested_s": 75.0
+    },
+    {
+      "cue": "investigation",
+      "kind": "music",
+      "candidate": 5,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 13839404,
+      "file": "investigation_c05.wav",
+      "requested_s": 72.08,
+      "seed": null,
+      "error": null,
+      "derived_from": "investigation_c02.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.01,
+        "tail": 2.91
+      },
+      "original_requested_s": 75.0
+    },
+    {
+      "cue": "investigation",
+      "kind": "music",
+      "candidate": 6,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 13115564,
+      "file": "investigation_c06.wav",
+      "requested_s": 68.31,
+      "seed": null,
+      "error": null,
+      "derived_from": "investigation_c03.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.01,
+        "tail": 6.68
+      },
+      "original_requested_s": 75.0
+    },
+    {
+      "cue": "investigation_late",
+      "kind": "music",
+      "candidate": 4,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 10191404,
+      "file": "investigation_late_c04.wav",
+      "requested_s": 53.08,
+      "seed": null,
+      "error": null,
+      "derived_from": "investigation_late_c01.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.0,
+        "tail": 6.92
+      },
+      "original_requested_s": 60.0
+    },
+    {
+      "cue": "investigation_late",
+      "kind": "music",
+      "candidate": 5,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 10617644,
+      "file": "investigation_late_c05.wav",
+      "requested_s": 55.3,
+      "seed": null,
+      "error": null,
+      "derived_from": "investigation_late_c02.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.0,
+        "tail": 4.7
+      },
+      "original_requested_s": 60.0
+    },
+    {
+      "cue": "investigation_late",
+      "kind": "music",
+      "candidate": 6,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 10874924,
+      "file": "investigation_late_c06.wav",
+      "requested_s": 56.64,
+      "seed": null,
+      "error": null,
+      "derived_from": "investigation_late_c03.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.11,
+        "tail": 3.25
+      },
+      "original_requested_s": 60.0
+    }
+  ],
+  "reconstructed": {
+    "at": "2026-11-27T22:32:51",
+    "reason": "Colab session ended before generate_audio.py wrote summary.json; the takes were already in Drive.",
+    "prompts": "rebuilt with build_prompt from audio/audio_cues.json v0 (unchanged since the run; the part2 run's recorded prompts match it)",
+    "latency_s": "gap between consecutive take timestamps in the zip (2 s resolution); unknown for the first take, which also includes the server warm-up",
+    "seed": "not recorded: the Colab copy of generate_audio.py predates seed logging"
+  }
+}

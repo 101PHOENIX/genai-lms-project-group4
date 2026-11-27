@@ -1,0 +1,114 @@
+{
+ "qc_version": 1,
+ "files": {
+  "trial_c01.mp3": {
+   "stamp": [
+    1200813,
+    1795817300
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 6,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.4,
+    "peak_dbfs": -1.28,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.07,
+    "tail_silence_s": 1.46,
+    "max_jump_lu": 10.1,
+    "seam": {
+     "level_step_db": 0.0,
+     "click_ratio": 5.29,
+     "spectral_distance": 0.964
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 1.46s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 10.1 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "click at the loop seam (x5.3 the usual step)"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.96)"
+     }
+    ]
+   }
+  },
+  "victory_c02.mp3": {
+   "stamp": [
+    160941,
+    1795817386
+   ],
+   "loop": false,
+   "result": {
+    "status": "pass",
+    "score": 98,
+    "duration_s": 10.0,
+    "requested_s": 10.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.9,
+    "peak_dbfs": -1.46,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 5.04,
+    "max_jump_lu": 3.8,
+    "seam": null,
+    "issues": []
+   }
+  },
+  "trial_c02.wav": {
+   "stamp": [
+    14113964,
+    1795817724
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 63,
+    "duration_s": 73.51,
+    "requested_s": 73.51,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.4,
+    "peak_dbfs": -1.28,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 2.5,
+    "seam": {
+     "level_step_db": 17.01,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.994
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 17.0 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.99)"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "decisions": {
+    "20261127-2115-audio-acestep-part2/victory_c03.mp3": {
+      "run": "20261127-2115-audio-acestep-part2",
+      "cue": "victory",
+      "kind": "music",
+      "take": 3,
+      "file": "victory_c03.mp3",
+      "status": "rejected",
+      "reasons": [
+        "Random notes"
+      ],
+      "qc_status": "pass",
+      "qc_score": 98,
+      "qc_issues": [],
+      "decided_at": "2026-11-27T22:24:48",
+      "promoted_at": null,
+      "unity_file": null,
+      "unity_root": null
+    },
+    "20261127-2115-audio-acestep-part2/victory_c02.mp3": {
+      "run": "20261127-2115-audio-acestep-part2",
+      "cue": "victory",
+      "kind": "music",
+      "take": 2,
+      "file": "victory_c02.mp3",
+      "status": "rejected",
+      "reasons": [
+        "Random notes"
+      ],
+      "qc_status": "warn",
+      "qc_score": 86,
+      "qc_issues": [
+        "loudness jumps 14.7 LU between 3 s windows"
+      ],
+      "decided_at": "2026-11-27T22:25:13",
+      "promoted_at": null,
+      "unity_file": null,
+      "unity_root": null
+    },
+    "20261127-2115-audio-acestep-part2/victory_c01.mp3": {
+      "run": "20261127-2115-audio-acestep-part2",
+      "cue": "victory",
+      "kind": "music",
+      "take": 1,
+      "file": "victory_c01.mp3",
+      "status": "rejected",
+      "reasons": [
+        "Random notes"
+      ],
+      "qc_status": "warn",
+      "qc_score": 85,
+      "qc_issues": [
+        "loudness jumps 11.5 LU between 3 s windows"
+      ],
+      "decided_at": "2026-11-27T22:25:42",
+      "promoted_at": null,
+      "unity_file": null,
+      "unity_root": null
+    },
+    "20261127-2115-audio-acestep-part2/game_over_c02.mp3": {
+      "run": "20261127-2115-audio-acestep-part2",
+      "cue": "game_over",
+      "kind": "music",
+      "take": 2,
+      "file": "game_over_c02.mp3",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "pass",
+      "qc_score": 98,
+      "qc_issues": [],
+      "decided_at": "2026-11-27T22:28:20",
+      "promoted_at": "2026-11-27T22:28:20",
+      "unity_file": "unity/Assets/Audio/Music/game_over.mp3",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-1942-audio-acestep/exploration_c04.wav": {
+      "run": "20261127-1942-audio-acestep",
+      "cue": "exploration",
+      "kind": "music",
+      "take": 4,
+      "file": "exploration_c04.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 66,
+      "qc_issues": [
+        "loop seam level step 32.4 dB",
+        "timbre changes across the loop seam (0.86)"
+      ],
+      "decided_at": "2026-11-27T22:57:04",
+      "promoted_at": "2026-11-27T22:57:04",
+      "unity_file": "unity/Assets/Audio/Music/exploration.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-1942-audio-acestep/crime_discovery_c04.wav": {
+      "run": "20261127-1942-audio-acestep",
+      "cue": "crime_discovery",
+      "kind": "music",
+      "take": 4,
+      "file": "crime_discovery_c04.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 84,
+      "qc_issues": [
+        "loop seam level step 29.6 dB"
+      ],
+      "decided_at": "2026-11-27T22:59:25",
+      "promoted_at": "2026-11-27T22:59:25",
+      "unity_file": "unity/Assets/Audio/Music/crime_discovery.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-1942-audio-acestep/investigation_c05.wav": {
+      "run": "20261127-1942-audio-acestep",
+      "cue": "investigation",
+      "kind": "music",
+      "take": 5,
+      "file": "investigation_c05.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 70,
+      "qc_issues": [
+        "loop seam level step 16.3 dB",
+        "timbre changes across the loop seam (0.51)"
+      ],
+      "decided_at": "2026-11-27T23:01:26",
+      "promoted_at": "2026-11-27T23:01:26",
+      "unity_file": "unity/Assets/Audio/Music/investigation.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-1942-audio-acestep/investigation_late_c04.wav": {
+      "run": "20261127-1942-audio-acestep",
+      "cue": "investigation_late",
+      "kind": "music",
+      "take": 4,
+      "file": "investigation_late_c04.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 69,
+      "qc_issues": [
+        "loop seam level step 38.7 dB",
+        "timbre changes across the loop seam (0.43)"
+      ],
+      "decided_at": "2026-11-27T23:04:12",
+      "promoted_at": "2026-11-27T23:04:12",
+      "unity_file": "unity/Assets/Audio/Music/investigation_late.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261126-2045-audio-acestep/trial_c02.wav": {
+      "run": "20261126-2045-audio-acestep",
+      "cue": "trial",
+      "kind": "music",
+      "take": 2,
+      "file": "trial_c02.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 63,
+      "qc_issues": [
+        "loop seam level step 17.0 dB",
+        "timbre changes across the loop seam (0.99)"
+      ],
+      "decided_at": "2026-11-27T23:15:25",
+      "promoted_at": "2026-11-27T23:15:25",
+      "unity_file": "unity/Assets/Audio/Music/trial.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261126-2045-audio-acestep/victory_c02.mp3": {
+      "run": "20261126-2045-audio-acestep",
+      "cue": "victory",
+      "kind": "music",
+      "take": 2,
+      "file": "victory_c02.mp3",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "pass",
+      "qc_score": 98,
+      "qc_issues": [],
+      "decided_at": "2026-11-27T23:15:25",
+      "promoted_at": "2026-11-27T23:15:25",
+      "unity_file": "unity/Assets/Audio/Music/victory.mp3",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio/footsteps_c03.wav": {
+      "run": "20261127-2326-audio-stable-audio",
+      "cue": "footsteps",
+      "kind": "sfx",
+      "take": 3,
+      "file": "footsteps_c03.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 73,
+      "qc_issues": [
+        "quiet: -32.1 LUFS (< -26)"
+      ],
+      "decided_at": "2026-11-27T23:44:18",
+      "promoted_at": "2026-11-27T23:44:18",
+      "unity_file": "unity/Assets/Audio/SFX/footsteps.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio/door_open_c01.wav": {
+      "run": "20261127-2326-audio-stable-audio",
+      "cue": "door_open",
+      "kind": "sfx",
+      "take": 1,
+      "file": "door_open_c01.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "fail",
+      "qc_score": 45,
+      "qc_issues": [
+        "almost muted: -36.8 LUFS"
+      ],
+      "decided_at": "2026-11-27T23:44:42",
+      "promoted_at": "2026-11-27T23:44:42",
+      "unity_file": "unity/Assets/Audio/SFX/door_open.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio/clue_found_c02.wav": {
+      "run": "20261127-2326-audio-stable-audio",
+      "cue": "clue_found",
+      "kind": "sfx",
+      "take": 2,
+      "file": "clue_found_c02.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "fail",
+      "qc_score": 35,
+      "qc_issues": [
+        "clipping: 3.59% of samples at full scale",
+        "very loud: -3.2 LUFS (> -8)"
+      ],
+      "decided_at": "2026-11-27T23:45:11",
+      "promoted_at": "2026-11-27T23:45:11",
+      "unity_file": "unity/Assets/Audio/SFX/clue_found.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio/verdict_correct_c03.wav": {
+      "run": "20261127-2326-audio-stable-audio",
+      "cue": "verdict_correct",
+      "kind": "sfx",
+      "take": 3,
+      "file": "verdict_correct_c03.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "pass",
+      "qc_score": 98,
+      "qc_issues": [],
+      "decided_at": "2026-11-27T23:45:40",
+      "promoted_at": "2026-11-27T23:45:40",
+      "unity_file": "unity/Assets/Audio/SFX/verdict_correct.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio-2/dice_roll_c03.wav": {
+      "run": "20261127-2326-audio-stable-audio-2",
+      "cue": "dice_roll",
+      "kind": "sfx",
+      "take": 3,
+      "file": "dice_roll_c03.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 77,
+      "qc_issues": [
+        "quiet: -27.1 LUFS (< -26)"
+      ],
+      "decided_at": "2026-11-27T23:57:28",
+      "promoted_at": "2026-11-27T23:57:28",
+      "unity_file": "unity/Assets/Audio/SFX/dice_roll.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio-2/body_alarm_c02.wav": {
+      "run": "20261127-2326-audio-stable-audio-2",
+      "cue": "body_alarm",
+      "kind": "sfx",
+      "take": 2,
+      "file": "body_alarm_c02.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "pass",
+      "qc_score": 95,
+      "qc_issues": [],
+      "decided_at": "2026-11-27T23:57:45",
+      "promoted_at": "2026-11-27T23:57:45",
+      "unity_file": "unity/Assets/Audio/SFX/body_alarm.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261127-2326-audio-stable-audio-2/verdict_wrong_c02.wav": {
+      "run": "20261127-2326-audio-stable-audio-2",
+      "cue": "verdict_wrong",
+      "kind": "sfx",
+      "take": 2,
+      "file": "verdict_wrong_c02.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 79,
+      "qc_issues": [
+        "one-shot starts 0.60s late"
+      ],
+      "decided_at": "2026-11-27T23:58:01",
+      "promoted_at": "2026-11-27T23:58:02",
+      "unity_file": "unity/Assets/Audio/SFX/verdict_wrong.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    }
+  }
+}

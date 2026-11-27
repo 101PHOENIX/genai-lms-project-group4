@@ -9,10 +9,13 @@ Providers (--provider):
   acestep  ACE-Step 1.5 (MIT) REST server on a free Colab GPU or a local GPU.
            Async task + polling. Env ACESTEP_URL (default http://127.0.0.1:8001),
            optional ACESTEP_API_KEY. Music only.
+  stable-audio  Stable Audio 3 Small-SFX (Stability AI Community License) through its Python API.
+           SFX only. Run with `uv run python` from the stable-audio-3 repo (Colab cells in
+           tools/audio_studio.py); gated model: accept the licence on Hugging Face and log in.
   mock     Sine-tone WAVs, no network. Tests the pipeline and the Unity import.
 
-SFX are one-shots: make them with Stable Audio 3 Small SFX (free, runs on CPU) or take them
-from Freesound, then bring them in with `promote --file`, which records source and licence.
+SFX are one-shots: generate them with --provider stable-audio, or make them in the Stable Audio 3 UI /
+take them from Freesound and bring them in with `promote --file`, which records source and licence.
 
 Usage:
   python tools/generate_audio.py generate --provider mock
@@ -22,7 +25,7 @@ Usage:
       --licence "Stability AI Community License"
 
 Settings are read from the environment or a gitignored .env at the repo root.
-Standard library only.
+Standard library only; the stable-audio provider imports its own environment (torch) lazily.
 """
 from __future__ import annotations
 
@@ -62,6 +65,7 @@ UNITY_AUDIO_SUFFIXES = frozenset({".wav", ".mp3", ".ogg", ".aif", ".aiff"})
 # (min_s, max_s) accepted by each provider, per cue kind.
 LIMITS = {
     ("acestep", "music"): (10.0, 600.0),
+    ("stable-audio", "sfx"): (0.1, 120.0),
     ("mock", "music"): (0.1, 600.0),
     ("mock", "sfx"): (0.1, 30.0),
 }
@@ -257,6 +261,23 @@ class AceStepProvider:
     def settings(self) -> dict:
         return {"base_url": self._base, "lyrics": "[Instrumental]", "audio_format": "mp3"}
 
+    def check(self, timeout: float = 5.0, opener: Callable = urllib.request.urlopen) -> str | None:
+        """One quick GET /health, no retries.
+
+        Returns:
+            None when the server answers ok, else a human-readable reason.
+        """
+        try:
+            with opener(urllib.request.Request(self._base + "/health", headers=self._headers), timeout=timeout) as r:
+                status = json.loads(r.read()).get("data", {}).get("status")
+        except urllib.error.HTTPError as e:
+            return f"ACE-Step at {self._base} answered HTTP {e.code} on /health"
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError) as e:
+            return f"no ACE-Step server at {self._base} ({getattr(e, 'reason', e)})"
+        except (json.JSONDecodeError, AttributeError):
+            return f"{self._base}/health did not return ACE-Step's JSON"
+        return None if status == "ok" else f"ACE-Step at {self._base} is not ready (status={status!r})"
+
     def _call(self, path: str, body: dict):
         raw, _ = self._http(self._base + path, method="POST", body=body, headers=self._headers)
         try:
@@ -266,6 +287,8 @@ class AceStepProvider:
         if env.get("code") != 200 or env.get("error"):
             raise ProviderError(f"ACE-Step {path}: code={env.get('code')} error={env.get('error')}")
         return env["data"]
+
+    last_seed = None  # seed the server reported for the last take, if any
 
     def generate(self, cue: Cue, prompt: str) -> bytes:
         """Render one music cue.
@@ -302,6 +325,7 @@ class AceStepProvider:
             outputs = json.loads(outputs)
         if not outputs or not outputs[0].get("file"):
             raise ProviderError(f"ACE-Step task {task_id} succeeded without a file")
+        self.last_seed = outputs[0].get("seed_value", outputs[0].get("seed"))
         data, ctype = self._http(self._base + outputs[0]["file"], headers=self._headers)
         return _expect_audio(data, ctype, "ACE-Step")
 
@@ -320,6 +344,7 @@ class MockProvider:
 
     def generate(self, cue: Cue, prompt: str) -> bytes:
         freq = 220 + zlib.crc32(cue.id.encode()) % 440
+        self.last_seed = zlib.crc32(cue.id.encode())
         n = int(cue.duration_s * self.sample_rate)
         step = 2 * math.pi * freq / self.sample_rate
         samples = array("h", (int(8000 * math.sin(step * i)) for i in range(n)))
@@ -332,11 +357,88 @@ class MockProvider:
         return buf.getvalue()
 
 
+class StableAudioProvider:
+    """Stable Audio 3 Small-SFX through its Python API (github.com/Stability-AI/stable-audio-3).
+
+    Needs that repo's environment (torch, stable_audio_3), so run this script with
+    `uv run python .../generate_audio.py` from the stable-audio-3 folder, e.g. on Colab (Audio Studio
+    prints the cells). The model is gated on Hugging Face: accept its licence and log in (HF_TOKEN).
+    Env SA3_MODEL (default small-sfx), SA3_STEPS (8), SA3_CFG (1.0).
+    """
+
+    name = "stable-audio"
+    kinds = frozenset({"sfx"})
+    extension = "wav"
+    licence = "Stability AI Community License (Stable Audio 3 Small-SFX)"
+    max_seed = 99999  # same range the library draws from for seed=-1
+
+    def __init__(self, model_name: str = "small-sfx", steps: int = 8, cfg_scale: float = 1.0,
+                 model=None, rng: Callable[[int, int], int] | None = None):
+        self._model_name, self._steps, self._cfg = model_name, steps, cfg_scale
+        self._model = model
+        import random
+        self._rng = rng or random.randint
+        self.last_seed = None
+
+    def settings(self) -> dict:
+        return {"model": self._model_name, "steps": self._steps, "cfg_scale": self._cfg,
+                "sample_rate": self._model.model.sample_rate if self._model is not None else None}
+
+    def check(self) -> str | None:
+        if self._model is not None:
+            return None
+        import importlib.util
+        if importlib.util.find_spec("stable_audio_3") is None:
+            return ("stable_audio_3 is not importable: run this script with `uv run python` from the "
+                    "stable-audio-3 folder (see the Colab cells in Audio Studio)")
+        return None
+
+    def _load(self):
+        if self._model is None:
+            try:
+                from stable_audio_3 import StableAudioModel
+                log.info("loading model=%s (first run downloads the weights)", self._model_name)
+                self._model = StableAudioModel.from_pretrained(self._model_name)
+            except Exception as e:  # gated repo, no token, no network, bad model name...
+                text = str(e)
+                status = 401 if any(s in text for s in ("401", "403", "gated", "Gated", "token", "authorized")) else None
+                raise ProviderError(f"cannot load Stable Audio 3 '{self._model_name}': {text[:300]}", status) from e
+        return self._model
+
+    def generate(self, cue: Cue, prompt: str) -> bytes:
+        """Render one SFX take as a 16-bit WAV of exactly the cue's duration.
+
+        Raises:
+            ProviderError: If the model cannot be loaded or generation fails.
+        """
+        model = self._load()
+        seed = self._rng(0, self.max_seed)
+        try:
+            audio = model.generate(prompt=prompt, duration=cue.duration_s, seed=seed,
+                                   steps=self._steps, cfg_scale=self._cfg)
+        except Exception as e:  # CUDA OOM, bad duration...
+            raise ProviderError(f"Stable Audio 3 generation failed: {str(e)[:300]}") from e
+        self.last_seed = seed
+        import numpy as np
+        take = audio[0]
+        take = take.detach().float().cpu().numpy() if hasattr(take, "detach") else np.asarray(take, dtype="float32")
+        sr = int(model.model.sample_rate)
+        take = take[:, : int(round(cue.duration_s * sr))]  # (channels, samples), trimmed to the request
+        pcm = (np.clip(take, -1.0, 1.0) * 32767).astype("<i2").T.copy()
+        buf = BytesIO()
+        with wave.open(buf, "wb") as w:
+            w.setnchannels(pcm.shape[1])
+            w.setsampwidth(2)
+            w.setframerate(sr)
+            w.writeframes(pcm.tobytes())
+        return buf.getvalue()
+
+
 def make_provider(name: str):
     """Build a provider from its name and the environment.
 
     Args:
-        name: "acestep" or "mock".
+        name: "acestep", "stable-audio" or "mock".
 
     Returns:
         A provider instance.
@@ -347,6 +449,9 @@ def make_provider(name: str):
     if name == "acestep":
         return AceStepProvider(os.environ.get("ACESTEP_URL", "http://127.0.0.1:8001"),
                                os.environ.get("ACESTEP_API_KEY"))
+    if name == "stable-audio":
+        return StableAudioProvider(os.environ.get("SA3_MODEL", "small-sfx"), int(os.environ.get("SA3_STEPS", "8")),
+                                   float(os.environ.get("SA3_CFG", "1.0")))
     if name == "mock":
         return MockProvider()
     raise ValueError(f"unknown provider {name!r}")
@@ -402,17 +507,17 @@ def run_generate(provider, manifest: dict, cues: list[Cue], candidates: int, out
         prompt = prompts[cue.id] = build_prompt(manifest, cue)
         for i in range(1, candidates + 1):
             row = {"cue": cue.id, "kind": cue.kind, "candidate": i, "ok": False, "latency_s": None,
-                   "bytes": 0, "file": None, "requested_s": cue.duration_s, "error": None}
+                   "bytes": 0, "file": None, "requested_s": cue.duration_s, "seed": None, "error": None}
             t0 = time.perf_counter()
             try:
                 audio = provider.generate(cue, prompt)
                 row["file"] = f"{cue.id}_c{i:02d}.{provider.extension}"
                 (out_dir / row["file"]).write_bytes(audio)
-                row.update(ok=True, bytes=len(audio))
+                row.update(ok=True, bytes=len(audio), seed=getattr(provider, "last_seed", None))
             except ProviderError as e:
                 row["error"] = str(e)
                 if e.status in AUTH_STATUSES:
-                    aborted = f"auth error {e.status}: check ACESTEP_API_KEY"
+                    aborted = f"auth error {e.status}: check the credentials (ACESTEP_API_KEY / Hugging Face login)"
                 elif isinstance(e, NetworkError) and not any(r["ok"] for r in rows):
                     aborted = "provider unreachable before any success: is the server/URL up?"
             row["latency_s"] = round(time.perf_counter() - t0, 2)
@@ -452,6 +557,12 @@ def cmd_generate(args: argparse.Namespace) -> int:
         log.error("invalid_cue %s", e)
     if errors or not cues:
         return 2
+    if hasattr(provider, "check"):
+        problem = provider.check()
+        if problem:
+            log.error("provider_unavailable %s. Start it (`uv run acestep-api` in ACE-Step-1.5) or set ACESTEP_URL; "
+                      "no run folder was created", problem)
+            return 2
     out_dir = args.out or ROOT / "baselines" / f"{datetime.now():%Y%m%d-%H%M}-audio-{provider.name}"
     summary = run_generate(provider, manifest, cues, args.candidates, out_dir)
     log.info("run_done out=%s success_rate=%.2f latency_p50_s=%s generated_audio_s=%s",
@@ -464,10 +575,17 @@ def _from_run(run_dir: Path, cue_id: str, take: int) -> tuple[Path, dict]:
     row = next((r for r in summary["rows"] if r["cue"] == cue_id and r["candidate"] == take and r["ok"]), None)
     if row is None:
         raise ValueError(f"no successful take {take} for '{cue_id}' in {run_dir}")
-    return run_dir / row["file"], {
+    record = {
         "provider": summary["provider"], "licence": summary.get("licence"), "settings": summary["settings"],
         "run": run_dir.name, "take": take, "prompt": summary["prompts"].get(cue_id),
+        "seed": row.get("seed"), "latency_s": row.get("latency_s"),
+        "manifest_version": summary.get("manifest_version"),
     }
+    # imported takes (Stable Audio 3 UI, Freesound) and edited takes (Audio Studio trim)
+    for key in ("source", "original_file", "licence", "derived_from", "edit", "trim_s"):
+        if row.get(key):
+            record[key] = row[key]
+    return run_dir / row["file"], record
 
 
 def _from_file(path: Path, source: str | None, licence: str | None) -> tuple[Path, dict]:
@@ -502,10 +620,35 @@ def cmd_promote(args: argparse.Namespace) -> int:
     except (ValueError, FileNotFoundError) as e:
         log.error("promote_failed cue=%s error=%s", cue.id, e)
         return 2
-    if src.suffix.lower() not in UNITY_AUDIO_SUFFIXES:
-        log.error("unsupported_format file=%s (Unity imports %s)", src.name, sorted(UNITY_AUDIO_SUFFIXES))
+    try:
+        promote(cue, src, record, args.unity_audio, args.provenance)
+    except ValueError as e:
+        log.error("promote_failed cue=%s error=%s", cue.id, e)
         return 2
-    dest_dir = args.unity_audio / ("Music" if cue.kind == "music" else "SFX")
+    return 0
+
+
+def promote(cue: Cue, src: Path, record: dict, unity_audio: Path, provenance: Path) -> Path:
+    """Copy an audio file into <unity_audio>/Music|SFX/<cue id>.<ext> and record its provenance.
+
+    Shared by the CLI and tools/audio_studio.py.
+
+    Args:
+        cue: The cue the file is for (its kind picks Music/ or SFX/).
+        src: Source audio file.
+        record: Provenance fields (provider, licence, run, take, prompt...).
+        unity_audio: Unity audio root holding Music/ and SFX/.
+        provenance: provenance.json path; created if missing.
+
+    Returns:
+        The destination path.
+
+    Raises:
+        ValueError: If Unity cannot import the file format.
+    """
+    if src.suffix.lower() not in UNITY_AUDIO_SUFFIXES:
+        raise ValueError(f"unsupported format {src.name} (Unity imports {sorted(UNITY_AUDIO_SUFFIXES)})")
+    dest_dir = unity_audio / ("Music" if cue.kind == "music" else "SFX")
     dest_dir.mkdir(parents=True, exist_ok=True)
     dest = dest_dir / f"{cue.id}{src.suffix.lower()}"
     for stale in dest_dir.glob(f"{cue.id}.*"):
@@ -513,21 +656,22 @@ def cmd_promote(args: argparse.Namespace) -> int:
             log.warning("replacing_other_format old=%s new=%s (re-assign the clip in the Inspector)", stale.name, dest.name)
             stale.unlink()
     shutil.copyfile(src, dest)
-    prov = json.loads(args.provenance.read_text(encoding="utf-8")) if args.provenance.is_file() else {}
+    prov = json.loads(provenance.read_text(encoding="utf-8")) if provenance.is_file() else {}
     prov[cue.id] = {
-        "file": str(dest.relative_to(ROOT)) if dest.is_relative_to(ROOT) else str(dest),
+        "file": dest.relative_to(ROOT).as_posix() if dest.is_relative_to(ROOT) else str(dest),
         **record, "promoted_at": datetime.now().isoformat(timespec="seconds"),
     }
-    args.provenance.write_text(json.dumps(prov, indent=2, ensure_ascii=False), encoding="utf-8")
+    provenance.parent.mkdir(parents=True, exist_ok=True)
+    provenance.write_text(json.dumps(prov, indent=2, ensure_ascii=False), encoding="utf-8")
     log.info("promoted cue=%s dest=%s licence=%r", cue.id, dest, record.get("licence"))
-    return 0
+    return dest
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap = argparse.ArgumentParser(description=__doc__.split("\n", 1)[0])
     sub = ap.add_subparsers(dest="command", required=True)
     g = sub.add_parser("generate", help="generate candidates into baselines/")
-    g.add_argument("--provider", choices=["acestep", "mock"], default="mock")
+    g.add_argument("--provider", choices=["acestep", "stable-audio", "mock"], default="mock")
     g.add_argument("--only", nargs="+", metavar="CUE", help="cue ids to render (default: all)")
     g.add_argument("--candidates", type=int, default=3)
     g.add_argument("--manifest", type=Path, default=MANIFEST)

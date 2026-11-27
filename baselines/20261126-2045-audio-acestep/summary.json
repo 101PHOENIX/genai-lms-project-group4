@@ -1,0 +1,79 @@
+{
+  "provider": "acestep",
+  "licence": "MIT (ACE-Step 1.5)",
+  "settings": {
+    "base_url": "http://127.0.0.1:8001",
+    "lyrics": "[Instrumental]",
+    "audio_format": "mp3"
+  },
+  "manifest_version": "v0",
+  "candidates_per_cue": null,
+  "aborted": null,
+  "runs": 2,
+  "success_rate": 1.0,
+  "latency_p50_s": null,
+  "latency_max_s": null,
+  "generated_audio_s": 85.0,
+  "ok_per_cue": {
+    "trial": 2,
+    "victory": 1
+  },
+  "prompts": {
+    "trial": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Dramatic, confrontational debate theme. Driving orchestral string ostinato, punchy taiko and snare, bold brass hits over an electronic beat. High contrast and high stakes. 128 BPM. Key of E minor. Steady tempo from the very first beat, no intro, no outro, no fade-in, no fade-out, no final chord, constant energy from start to end so the track can loop seamlessly.",
+    "victory": "Instrumental soundtrack for an original stylized anime mystery visual novel set in a locked boarding school. No vocals, no lyrics. Short triumphant resolution with bright brass and strings, a feeling of relief, ending on a clear final chord."
+  },
+  "rows": [
+    {
+      "cue": "trial",
+      "kind": "music",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 1200813,
+      "file": "trial_c01.mp3",
+      "requested_s": 75.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "victory",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 160941,
+      "file": "victory_c02.mp3",
+      "requested_s": 10.0,
+      "seed": null,
+      "error": null
+    },
+    {
+      "cue": "trial",
+      "kind": "music",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": null,
+      "bytes": 14113964,
+      "file": "trial_c02.wav",
+      "requested_s": 73.51,
+      "seed": null,
+      "error": null,
+      "derived_from": "trial_c01.mp3",
+      "edit": "trim",
+      "trim_s": {
+        "head": 0.05,
+        "tail": 1.44
+      },
+      "original_requested_s": 75.0
+    }
+  ],
+  "reconstructed": {
+    "at": "2026-11-27T23:15:08",
+    "reason": "Only the two kept takes of an earlier Colab run were saved; its summary.json was not.",
+    "prompts": "rebuilt with build_prompt from audio/audio_cues.json v0 (the music prompts have not changed between the runs on record)",
+    "latency_s": "unknown: the file times are download times",
+    "seed": "not recorded",
+    "takes": "kept takes only; candidates_per_cue and the other takes of the run are unknown",
+    "run_date": "from the folder name; renamed from 20262025-2045-audio-acestep (an invalid date) to 20261126-2045-audio-acestep"
+  }
+}

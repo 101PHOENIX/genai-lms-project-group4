@@ -1,0 +1,1007 @@
+{
+ "qc_version": 1,
+ "files": {
+  "exploration_c01.mp3": {
+   "stamp": [
+    960813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 13,
+    "duration_s": 60.0,
+    "requested_s": 60.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.8,
+    "peak_dbfs": -1.47,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.04,
+    "tail_silence_s": 4.27,
+    "max_jump_lu": 13.7,
+    "seam": {
+     "level_step_db": 20.19,
+     "click_ratio": 0.27,
+     "spectral_distance": 0.964
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 4.27s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 13.7 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 20.2 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.96)"
+     }
+    ]
+   }
+  },
+  "exploration_c02.mp3": {
+   "stamp": [
+    960813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 0,
+    "duration_s": 60.0,
+    "requested_s": 60.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -17.1,
+    "peak_dbfs": -1.46,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.72,
+    "tail_silence_s": 3.12,
+    "max_jump_lu": 10.0,
+    "seam": {
+     "level_step_db": 0.0,
+     "click_ratio": 20.2,
+     "spectral_distance": 0.962
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop starts with 0.72s of silence"
+     },
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 3.12s of silence"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "click at the loop seam (x20.2 the usual step)"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.96)"
+     }
+    ]
+   }
+  },
+  "exploration_c03.mp3": {
+   "stamp": [
+    960813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 26,
+    "duration_s": 60.0,
+    "requested_s": 60.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.0,
+    "peak_dbfs": -1.35,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 6.28,
+    "max_jump_lu": 7.4,
+    "seam": {
+     "level_step_db": 29.65,
+     "click_ratio": 0.3,
+     "spectral_distance": 0.969
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 6.28s of silence"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 29.6 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.97)"
+     }
+    ]
+   }
+  },
+  "crime_discovery_c01.mp3": {
+   "stamp": [
+    480813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 25,
+    "duration_s": 30.0,
+    "requested_s": 30.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -15.5,
+    "peak_dbfs": -1.39,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 1.65,
+    "max_jump_lu": 2.3,
+    "seam": {
+     "level_step_db": 24.31,
+     "click_ratio": 0.26,
+     "spectral_distance": 0.975
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 1.65s of silence"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 24.3 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.97)"
+     }
+    ]
+   }
+  },
+  "crime_discovery_c02.mp3": {
+   "stamp": [
+    480813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 10,
+    "duration_s": 30.0,
+    "requested_s": 30.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.1,
+    "peak_dbfs": -1.56,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 5.86,
+    "max_jump_lu": 30.4,
+    "seam": {
+     "level_step_db": 2.81,
+     "click_ratio": 5.32,
+     "spectral_distance": 0.851
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 5.86s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 30.4 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "click at the loop seam (x5.3 the usual step)"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.85)"
+     }
+    ]
+   }
+  },
+  "crime_discovery_c03.mp3": {
+   "stamp": [
+    480813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 14,
+    "duration_s": 30.0,
+    "requested_s": 30.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.1,
+    "peak_dbfs": -1.05,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 4.58,
+    "max_jump_lu": 20.5,
+    "seam": {
+     "level_step_db": 32.29,
+     "click_ratio": 0.3,
+     "spectral_distance": 0.976
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 4.58s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 20.5 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 32.3 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.98)"
+     }
+    ]
+   }
+  },
+  "investigation_c01.mp3": {
+   "stamp": [
+    1200813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 14,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -15.2,
+    "peak_dbfs": -1.4,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.01,
+    "tail_silence_s": 4.77,
+    "max_jump_lu": 13.0,
+    "seam": {
+     "level_step_db": 37.88,
+     "click_ratio": 0.02,
+     "spectral_distance": 0.96
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 4.77s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 13.0 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 37.9 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.96)"
+     }
+    ]
+   }
+  },
+  "investigation_c02.mp3": {
+   "stamp": [
+    1200813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 13,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -15.0,
+    "peak_dbfs": -1.45,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 2.93,
+    "max_jump_lu": 24.3,
+    "seam": {
+     "level_step_db": 22.27,
+     "click_ratio": 0.6,
+     "spectral_distance": 0.972
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 2.93s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 24.3 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 22.3 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.97)"
+     }
+    ]
+   }
+  },
+  "investigation_c03.mp3": {
+   "stamp": [
+    1200813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 12,
+    "duration_s": 75.0,
+    "requested_s": 75.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.1,
+    "peak_dbfs": -1.12,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.03,
+    "tail_silence_s": 6.7,
+    "max_jump_lu": 19.8,
+    "seam": {
+     "level_step_db": 17.68,
+     "click_ratio": 0.47,
+     "spectral_distance": 0.969
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 6.70s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 19.8 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 17.7 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.97)"
+     }
+    ]
+   }
+  },
+  "investigation_late_c01.mp3": {
+   "stamp": [
+    960813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 11,
+    "duration_s": 60.0,
+    "requested_s": 60.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.7,
+    "peak_dbfs": -1.43,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 6.94,
+    "max_jump_lu": 32.2,
+    "seam": {
+     "level_step_db": 38.74,
+     "click_ratio": 0.54,
+     "spectral_distance": 0.98
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 6.94s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 32.2 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 38.7 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.98)"
+     }
+    ]
+   }
+  },
+  "investigation_late_c02.mp3": {
+   "stamp": [
+    960813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 12,
+    "duration_s": 60.0,
+    "requested_s": 60.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.9,
+    "peak_dbfs": -1.42,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 4.72,
+    "max_jump_lu": 21.2,
+    "seam": {
+     "level_step_db": 12.82,
+     "click_ratio": 0.14,
+     "spectral_distance": 0.978
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 4.72s of silence"
+     },
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 21.2 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 12.8 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.98)"
+     }
+    ]
+   }
+  },
+  "investigation_late_c03.mp3": {
+   "stamp": [
+    960813,
+    1795815171
+   ],
+   "loop": true,
+   "result": {
+    "status": "fail",
+    "score": 36,
+    "duration_s": 60.0,
+    "requested_s": 60.0,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.3,
+    "peak_dbfs": -1.41,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.13,
+    "tail_silence_s": 3.27,
+    "max_jump_lu": 7.0,
+    "seam": {
+     "level_step_db": 0.0,
+     "click_ratio": 0.72,
+     "spectral_distance": 0.966
+    },
+    "issues": [
+     {
+      "code": "silence",
+      "severity": "fail",
+      "message": "loop ends with 3.27s of silence"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.97)"
+     }
+    ]
+   }
+  },
+  "exploration_c04.wav": {
+   "stamp": [
+    10700204,
+    1795815568
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 66,
+    "duration_s": 55.73,
+    "requested_s": 55.73,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.8,
+    "peak_dbfs": -1.47,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 2.4,
+    "seam": {
+     "level_step_db": 32.35,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.862
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 32.4 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.86)"
+     }
+    ]
+   }
+  },
+  "exploration_c05.wav": {
+   "stamp": [
+    10790444,
+    1795815568
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 70,
+    "duration_s": 56.2,
+    "requested_s": 56.2,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -17.1,
+    "peak_dbfs": -1.46,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 2.8,
+    "seam": {
+     "level_step_db": 23.27,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.452
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 23.3 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.45)"
+     }
+    ]
+   }
+  },
+  "exploration_c06.wav": {
+   "stamp": [
+    10318124,
+    1795815568
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 69,
+    "duration_s": 53.74,
+    "requested_s": 53.74,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.0,
+    "peak_dbfs": -1.35,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 2.6,
+    "seam": {
+     "level_step_db": 29.65,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.745
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 29.6 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.74)"
+     }
+    ]
+   }
+  },
+  "crime_discovery_c04.wav": {
+   "stamp": [
+    5445164,
+    1795815569
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 84,
+    "duration_s": 28.36,
+    "requested_s": 28.36,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -15.5,
+    "peak_dbfs": -1.39,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 1.5,
+    "seam": {
+     "level_step_db": 29.64,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.329
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 29.6 dB"
+     }
+    ]
+   }
+  },
+  "crime_discovery_c05.wav": {
+   "stamp": [
+    4638764,
+    1795815569
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 83,
+    "duration_s": 24.16,
+    "requested_s": 24.16,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.1,
+    "peak_dbfs": -1.56,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.01,
+    "tail_silence_s": 0.05,
+    "max_jump_lu": 5.9,
+    "seam": {
+     "level_step_db": 2.45,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.448
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.45)"
+     }
+    ]
+   }
+  },
+  "crime_discovery_c06.wav": {
+   "stamp": [
+    4884524,
+    1795815569
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 67,
+    "duration_s": 25.44,
+    "requested_s": 25.44,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -16.0,
+    "peak_dbfs": -1.05,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 1.8,
+    "seam": {
+     "level_step_db": 32.01,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.922
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 32.0 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.92)"
+     }
+    ]
+   }
+  },
+  "investigation_c04.wav": {
+   "stamp": [
+    13488044,
+    1795815569
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 54,
+    "duration_s": 70.25,
+    "requested_s": 70.25,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -15.2,
+    "peak_dbfs": -1.4,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.01,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 13.0,
+    "seam": {
+     "level_step_db": 37.88,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.903
+    },
+    "issues": [
+     {
+      "code": "jumps",
+      "severity": "warn",
+      "message": "loudness jumps 13.0 LU between 3 s windows"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 37.9 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.90)"
+     }
+    ]
+   }
+  },
+  "investigation_c05.wav": {
+   "stamp": [
+    13839404,
+    1795815569
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 70,
+    "duration_s": 72.08,
+    "requested_s": 72.08,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.9,
+    "peak_dbfs": -1.45,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 4.1,
+    "seam": {
+     "level_step_db": 16.31,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.507
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 16.3 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.51)"
+     }
+    ]
+   }
+  },
+  "investigation_c06.wav": {
+   "stamp": [
+    13115564,
+    1795815570
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 67,
+    "duration_s": 68.31,
+    "requested_s": 68.31,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.1,
+    "peak_dbfs": -1.12,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 1.9,
+    "seam": {
+     "level_step_db": 22.91,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.7
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 22.9 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.70)"
+     }
+    ]
+   }
+  },
+  "investigation_late_c04.wav": {
+   "stamp": [
+    10191404,
+    1795815570
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 69,
+    "duration_s": 53.08,
+    "requested_s": 53.08,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.7,
+    "peak_dbfs": -1.43,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 3.2,
+    "seam": {
+     "level_step_db": 38.73,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.429
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 38.7 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.43)"
+     }
+    ]
+   }
+  },
+  "investigation_late_c05.wav": {
+   "stamp": [
+    10617644,
+    1795815570
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 64,
+    "duration_s": 55.3,
+    "requested_s": 55.3,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -13.9,
+    "peak_dbfs": -1.42,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.01,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 3.0,
+    "seam": {
+     "level_step_db": 12.76,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.979
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 12.8 dB"
+     },
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "timbre changes across the loop seam (0.98)"
+     }
+    ]
+   }
+  },
+  "investigation_late_c06.wav": {
+   "stamp": [
+    10874924,
+    1795815570
+   ],
+   "loop": true,
+   "result": {
+    "status": "warn",
+    "score": 84,
+    "duration_s": 56.64,
+    "requested_s": 56.64,
+    "sample_rate": 48000,
+    "channels": 2,
+    "lufs": -14.3,
+    "peak_dbfs": -1.41,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.02,
+    "tail_silence_s": 0.02,
+    "max_jump_lu": 5.6,
+    "seam": {
+     "level_step_db": 27.03,
+     "click_ratio": 0.0,
+     "spectral_distance": 0.193
+    },
+    "issues": [
+     {
+      "code": "seam",
+      "severity": "warn",
+      "message": "loop seam level step 27.0 dB"
+     }
+    ]
+   }
+  }
+ }
+}

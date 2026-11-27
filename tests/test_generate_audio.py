@@ -173,6 +173,28 @@ class ProviderTests(unittest.TestCase):
         with self.assertRaisesRegex(ga.ProviderError, "still running"):
             p.generate(ga.Cue("a", "music", "x", 30, True), "p")
 
+    def test_acestep_health_check(self):
+        p = ga.AceStepProvider("http://h:8001")
+        ok = scripted_opener(FakeResponse(json.dumps({"data": {"status": "ok"}}).encode(), "application/json"))
+        self.assertIsNone(p.check(opener=ok))
+        self.assertEqual("http://h:8001/health", ok.calls[0].full_url)
+        down = scripted_opener(urllib.error.URLError(ConnectionRefusedError(10061, "refused")))
+        self.assertIn("no ACE-Step server at http://h:8001", p.check(opener=down))
+        self.assertEqual(1, len(down.calls))  # no retries
+        self.assertIn("HTTP 404", p.check(opener=scripted_opener(http_error(404))))
+
+    def test_generate_stops_before_creating_a_run_when_server_is_down(self):
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d) / "run"
+            args = ga.parse_args(["generate", "--provider", "acestep", "--only", "victory", "--out", str(out)])
+            old = ga.AceStepProvider.check
+            ga.AceStepProvider.check = lambda self, **k: "no ACE-Step server at x"
+            try:
+                self.assertEqual(2, args.func(args))
+            finally:
+                ga.AceStepProvider.check = old
+            self.assertFalse(out.exists())
+
     def test_mock_writes_a_wav_of_the_requested_length(self):
         data = ga.MockProvider().generate(ga.Cue("a", "sfx", "x", 1.5, False), "p")
         with wave.open(io.BytesIO(data)) as w:

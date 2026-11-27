@@ -42,3 +42,15 @@ unity/[Uu]ser[Ss]ettings/
 
 # Course material (on Moodle, not ours to redistribute)
 GenAI - Videogame.pdf
+
+# Audio takes: large and regenerable. Each run keeps summary.json + qc.json as evidence;
+# the promoted takes live in unity/Assets/Audio/.
+baselines/*-audio-*/*.wav
+baselines/*-audio-*/*.mp3
+baselines/*-audio-*/*.ogg
+baselines/*-audio-*/*.flac
+baselines/*-audio-*/*.aif
+baselines/*-audio-*/*.aiff
+
+# Local Unity sandbox used to test the audio import (not part of the game project)
+AudioTest/

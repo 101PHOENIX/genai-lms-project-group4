@@ -1,0 +1,6 @@
+# Audio Studio (tools/audio_studio.py, tools/audio_qc.py). generate_audio.py itself needs none of these.
+streamlit>=1.45
+numpy>=1.26
+scipy>=1.11
+soundfile>=0.12
+pandas>=2.0

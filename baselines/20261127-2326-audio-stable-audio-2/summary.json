@@ -1,0 +1,138 @@
+{
+  "provider": "stable-audio",
+  "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+  "settings": {
+    "model": "small-sfx",
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sample_rate": 44100
+  },
+  "manifest_version": "v0",
+  "candidates_per_cue": 3,
+  "aborted": null,
+  "runs": 9,
+  "success_rate": 1.0,
+  "latency_p50_s": 25.64,
+  "latency_max_s": 50.09,
+  "generated_audio_s": 27.0,
+  "ok_per_cue": {
+    "dice_roll": 3,
+    "body_alarm": 3,
+    "verdict_wrong": 3
+  },
+  "prompts": {
+    "dice_roll": "Board game wooden dice bouncing and clattering onto a hard wooden table, several fast hollow wood taps slowing down to a stop, crisp foley sound effect, close mic, dry room.",
+    "body_alarm": "Loud old school bell alarm ringing urgently in an empty corridor, long reverb tail.",
+    "verdict_wrong": "Gavel strike followed by a short low descending dissonant sting."
+  },
+  "rows": [
+    {
+      "cue": "dice_roll",
+      "kind": "sfx",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 50.09,
+      "bytes": 352844,
+      "file": "dice_roll_c01.wav",
+      "requested_s": 2.0,
+      "seed": 665,
+      "error": null
+    },
+    {
+      "cue": "dice_roll",
+      "kind": "sfx",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 24.39,
+      "bytes": 352844,
+      "file": "dice_roll_c02.wav",
+      "requested_s": 2.0,
+      "seed": 7127,
+      "error": null
+    },
+    {
+      "cue": "dice_roll",
+      "kind": "sfx",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 24.4,
+      "bytes": 352844,
+      "file": "dice_roll_c03.wav",
+      "requested_s": 2.0,
+      "seed": 71655,
+      "error": null
+    },
+    {
+      "cue": "body_alarm",
+      "kind": "sfx",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 26.97,
+      "bytes": 705644,
+      "file": "body_alarm_c01.wav",
+      "requested_s": 4.0,
+      "seed": 84360,
+      "error": null
+    },
+    {
+      "cue": "body_alarm",
+      "kind": "sfx",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 26.63,
+      "bytes": 705644,
+      "file": "body_alarm_c02.wav",
+      "requested_s": 4.0,
+      "seed": 1125,
+      "error": null
+    },
+    {
+      "cue": "body_alarm",
+      "kind": "sfx",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 26.62,
+      "bytes": 705644,
+      "file": "body_alarm_c03.wav",
+      "requested_s": 4.0,
+      "seed": 21006,
+      "error": null
+    },
+    {
+      "cue": "verdict_wrong",
+      "kind": "sfx",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 25.62,
+      "bytes": 529244,
+      "file": "verdict_wrong_c01.wav",
+      "requested_s": 3.0,
+      "seed": 28942,
+      "error": null
+    },
+    {
+      "cue": "verdict_wrong",
+      "kind": "sfx",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 25.64,
+      "bytes": 529244,
+      "file": "verdict_wrong_c02.wav",
+      "requested_s": 3.0,
+      "seed": 40860,
+      "error": null
+    },
+    {
+      "cue": "verdict_wrong",
+      "kind": "sfx",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 25.45,
+      "bytes": 529244,
+      "file": "verdict_wrong_c03.wav",
+      "requested_s": 3.0,
+      "seed": 44277,
+      "error": null
+    }
+  ]
+}
