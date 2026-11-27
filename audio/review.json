@@ -307,6 +307,24 @@
       "promoted_at": "2026-11-27T23:58:02",
       "unity_file": "unity/Assets/Audio/SFX/verdict_wrong.wav",
       "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
+    },
+    "20261128-0012-audio-stable-audio-3/dialogue_blip_c05.wav": {
+      "run": "20261128-0012-audio-stable-audio-3",
+      "cue": "dialogue_blip",
+      "kind": "sfx",
+      "take": 5,
+      "file": "dialogue_blip_c05.wav",
+      "status": "approved",
+      "reasons": [],
+      "qc_status": "warn",
+      "qc_score": 73,
+      "qc_issues": [
+        "quiet: -34.1 LUFS (< -26)"
+      ],
+      "decided_at": "2026-11-28T00:31:24",
+      "promoted_at": "2026-11-28T00:31:24",
+      "unity_file": "unity/Assets/Audio/SFX/dialogue_blip.wav",
+      "unity_root": "C:\\Users\\angel\\Documents\\genAIProject\\genai-lms-project-group4\\unity\\Assets\\Audio"
     }
   }
 }

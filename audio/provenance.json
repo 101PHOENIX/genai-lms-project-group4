@@ -329,5 +329,27 @@
     "run_date": "2026-11-27T23:26",
     "approved_at": "2026-11-27T23:58:01",
     "promoted_at": "2026-11-27T23:58:02"
+  },
+  "dialogue_blip": {
+    "file": "unity/Assets/Audio/SFX/dialogue_blip.wav",
+    "provider": "stable-audio",
+    "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+    "settings": {
+      "model": "small-sfx",
+      "steps": 8,
+      "cfg_scale": 1.0,
+      "sample_rate": 44100
+    },
+    "run": "20261128-0012-audio-stable-audio-3",
+    "take": 5,
+    "prompt": "Single tiny water droplet plop in a quiet room, clean short pop, dry close mic foley.",
+    "seed": 44340,
+    "latency_s": 22.89,
+    "manifest_version": "v0",
+    "qc_status": "warn",
+    "qc_score": 73,
+    "run_date": "2026-11-28T00:12",
+    "approved_at": "2026-11-28T00:31:24",
+    "promoted_at": "2026-11-28T00:31:24"
   }
 }

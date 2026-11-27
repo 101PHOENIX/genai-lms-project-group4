@@ -1,0 +1,150 @@
+{
+ "qc_version": 1,
+ "files": {
+  "dialogue_blip_c01.wav": {
+   "stamp": [
+    176444,
+    1795822242
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 73,
+    "duration_s": 1.0,
+    "requested_s": 1.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -32.0,
+    "peak_dbfs": -11.0,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.89,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -32.0 LUFS (< -26)"
+     }
+    ]
+   }
+  },
+  "dialogue_blip_c02.wav": {
+   "stamp": [
+    176444,
+    1795822242
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 73,
+    "duration_s": 1.0,
+    "requested_s": 1.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -31.9,
+    "peak_dbfs": -11.78,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.93,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -31.9 LUFS (< -26)"
+     }
+    ]
+   }
+  },
+  "dialogue_blip_c03.wav": {
+   "stamp": [
+    176444,
+    1795822242
+   ],
+   "loop": false,
+   "result": {
+    "status": "fail",
+    "score": 45,
+    "duration_s": 1.0,
+    "requested_s": 1.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -37.6,
+    "peak_dbfs": -17.76,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.94,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "muted",
+      "severity": "fail",
+      "message": "almost muted: -37.6 LUFS"
+     }
+    ]
+   }
+  },
+  "dialogue_blip_c04.wav": {
+   "stamp": [
+    176444,
+    1795822242
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 73,
+    "duration_s": 1.0,
+    "requested_s": 1.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -33.5,
+    "peak_dbfs": -10.84,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.01,
+    "tail_silence_s": 0.94,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -33.5 LUFS (< -26)"
+     }
+    ]
+   }
+  },
+  "dialogue_blip_c05.wav": {
+   "stamp": [
+    176444,
+    1795822242
+   ],
+   "loop": false,
+   "result": {
+    "status": "warn",
+    "score": 73,
+    "duration_s": 1.0,
+    "requested_s": 1.0,
+    "sample_rate": 44100,
+    "channels": 2,
+    "lufs": -34.1,
+    "peak_dbfs": -13.79,
+    "clip_fraction": 0.0,
+    "head_silence_s": 0.0,
+    "tail_silence_s": 0.93,
+    "max_jump_lu": null,
+    "seam": null,
+    "issues": [
+     {
+      "code": "loudness",
+      "severity": "warn",
+      "message": "quiet: -34.1 LUFS (< -26)"
+     }
+    ]
+   }
+  }
+ }
+}

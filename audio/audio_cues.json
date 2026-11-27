@@ -46,8 +46,8 @@
     {"id": "footsteps", "prompt": "Footsteps of school shoes walking at a steady pace on a wooden corridor floor.", "duration_s": 3, "loop": false},
     {"id": "door_open", "prompt": "Heavy wooden classroom door creaking open slowly.", "duration_s": 2, "loop": false},
     {"id": "clue_found", "prompt": "Short bright sparkling chime for discovering a clue, video game interface sound.", "duration_s": 1.5, "loop": false},
-    {"id": "dialogue_blip", "prompt": "Single tiny muted marimba tap, soft wooden UI dialogue tick, clean dry short plop, no reverb, minimal game text scroll blip..", "duration_s": 0.5, "loop": false},
-    {"id": "verdict_correct", "prompt": "Hard wooden judge gavel bang, crisp wood impact, leading into a dissonant low trombone and cello downward slide, ominous wrong verdict failure cue.", "duration_s": 3, "loop": false},
-    {"id": "verdict_wrong", "prompt": "Gavel strike followed by a short low descending dissonant sting.", "duration_s": 3, "loop": false}
+    {"id": "dialogue_blip", "prompt": "Single tiny water droplet plop in a quiet room, clean short pop, dry close mic foley.", "duration_s": 1, "loop": false},
+    {"id": "verdict_correct", "prompt": "Gavel strike followed by a short rising triumphant brass sting.", "duration_s": 3, "loop": false},
+    {"id": "verdict_wrong", "prompt": "Hard wooden judge gavel bang, crisp wood impact, leading into a dissonant low trombone and cello downward slide, ominous wrong verdict failure cue.", "duration_s": 3, "loop": false}
   ]
 }

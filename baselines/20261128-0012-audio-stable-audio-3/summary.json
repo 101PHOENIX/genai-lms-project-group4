@@ -1,0 +1,86 @@
+{
+  "provider": "stable-audio",
+  "licence": "Stability AI Community License (Stable Audio 3 Small-SFX)",
+  "settings": {
+    "model": "small-sfx",
+    "steps": 8,
+    "cfg_scale": 1.0,
+    "sample_rate": 44100
+  },
+  "manifest_version": "v0",
+  "candidates_per_cue": 5,
+  "aborted": null,
+  "runs": 5,
+  "success_rate": 1.0,
+  "latency_p50_s": 23.13,
+  "latency_max_s": 39.3,
+  "generated_audio_s": 5.0,
+  "ok_per_cue": {
+    "dialogue_blip": 5
+  },
+  "prompts": {
+    "dialogue_blip": "Single tiny water droplet plop in a quiet room, clean short pop, dry close mic foley."
+  },
+  "rows": [
+    {
+      "cue": "dialogue_blip",
+      "kind": "sfx",
+      "candidate": 1,
+      "ok": true,
+      "latency_s": 39.3,
+      "bytes": 176444,
+      "file": "dialogue_blip_c01.wav",
+      "requested_s": 1.0,
+      "seed": 33249,
+      "error": null
+    },
+    {
+      "cue": "dialogue_blip",
+      "kind": "sfx",
+      "candidate": 2,
+      "ok": true,
+      "latency_s": 22.66,
+      "bytes": 176444,
+      "file": "dialogue_blip_c02.wav",
+      "requested_s": 1.0,
+      "seed": 24267,
+      "error": null
+    },
+    {
+      "cue": "dialogue_blip",
+      "kind": "sfx",
+      "candidate": 3,
+      "ok": true,
+      "latency_s": 25.81,
+      "bytes": 176444,
+      "file": "dialogue_blip_c03.wav",
+      "requested_s": 1.0,
+      "seed": 36175,
+      "error": null
+    },
+    {
+      "cue": "dialogue_blip",
+      "kind": "sfx",
+      "candidate": 4,
+      "ok": true,
+      "latency_s": 23.13,
+      "bytes": 176444,
+      "file": "dialogue_blip_c04.wav",
+      "requested_s": 1.0,
+      "seed": 26314,
+      "error": null
+    },
+    {
+      "cue": "dialogue_blip",
+      "kind": "sfx",
+      "candidate": 5,
+      "ok": true,
+      "latency_s": 22.89,
+      "bytes": 176444,
+      "file": "dialogue_blip_c05.wav",
+      "requested_s": 1.0,
+      "seed": 44340,
+      "error": null
+    }
+  ]
+}
